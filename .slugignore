@@ -1,0 +1,8 @@
+inputs/
+outputs/
+attachments/*
+README.md 
+.gitpod.dockerfile
+.gitpod.yml
+app_pages/__pycache__/*
+jupyter_notebooks/*
