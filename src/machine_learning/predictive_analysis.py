@@ -39,7 +39,7 @@ def resize_input_image(img, version):
     Reshape image to average image size
     """
     image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
-    img_resized = img.resize((image_shape[0], image_shape[1], Image.ANTIALIAS))
+    img_resized = img.resize((image_shape[0], image_shape[1]), Image.ANTIALIAS)
     my_image = np.expand_dims(img_resized, axis=0)/255
 
     return my_image
@@ -58,9 +58,13 @@ def load_model_and_predict(my_image, version):
     predicted_class = target_map[pred_proba > 0.5]
     if predicted_class == target_map[0]:
         pred_proba = 1 - pred_proba
-
-    st.write(
+        st.write(
         f"The predictive analysis indicates the sample leaf is "
         f"**{predicted_class.lower()}**")
+    elif predicted_class == target_map[1]:
+        st.write(
+        f"The predictive analysis indicates the sample leaf is infected with "
+        f"**{predicted_class.lower()}**")
+
     
     return pred_proba, predicted_class
