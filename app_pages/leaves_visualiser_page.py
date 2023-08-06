@@ -58,6 +58,7 @@ def image_montage(dir_path, presented_label, num_rows, num_cols, figsize=(15,10)
     Loop through images and plot them 
     Limit the number of images plotted by predefined size of figure
     """
+    sns.set_style("white")
     
     fig_grid = num_rows * num_cols
     labels = os.listdir(dir_path)
