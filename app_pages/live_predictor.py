@@ -28,9 +28,10 @@ def page_powdery_mildew_predictor():
                                      type="jpg", accept_multiple_files=True)
 
     if images_buffer is not None:
+
         columns = ["Name", "Result"]
         df_report = pd.DataFrame(columns=columns)
-        df = []
+
         for image in images_buffer:
 
             img_pil = (Image.open(image))
@@ -45,9 +46,9 @@ def page_powdery_mildew_predictor():
 
             new_data = {"Name":image.name, "Result": predicted_class}
 
-            df_report.loc[0] = new_data
+            df_report.loc[len(df_report)] = new_data
 
-            if not df_report.empty:
-                st.success("Analysis report")
-                st.table(df_report)
-                st.markdown(download_dataframe_as_csv(df_report), unsafe_allow_html=True)
+        if not df_report.empty:
+            st.success("Analysis report")
+            st.table(df_report)
+            st.markdown(download_dataframe_as_csv(df_report), unsafe_allow_html=True)
