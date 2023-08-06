@@ -17,7 +17,7 @@ def page_ml_performance_metrics():
     model_acc = plt.imread(f"outputs/{version}/model_training_acc.png")
     st.image(model_acc, caption='Model Training accuracy')
 
-    model_loss = plt.imread(f"outputs/{version}/model_training_acc.png")
+    model_loss = plt.imread(f"outputs/{version}/model_training_loss.png")
     st.image(model_loss, caption="Model Training losses")
 
     conf_matrix = plt.imread(f"outputs/{version}/conf_matrix.png")
