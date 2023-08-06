@@ -23,7 +23,7 @@ def leaves_visualiser_body():
         avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
 
         st.warning(
-            f"A small difference in color pigment was observed between healthy and powdery mildew infected leaves"
+            f"We could not observe any explicit pattern that could be used to distinguish infected from uninfected."
         )
 
         st.image(avg_powdery_mildew, caption="Powdery mildew leaves - Average and Variability")
@@ -35,7 +35,7 @@ def leaves_visualiser_body():
         diff_bet_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
         st.warning(
-            'We observed a slight difference between the average images of powdery mildew and healthy leaves'
+           f"We could not observe any explicit pattern that could be used to distinguish infected from uninfected."
         )
 
         st.image(diff_bet_avgs, caption="Difference between average images")
@@ -59,7 +59,7 @@ def image_montage(dir_path, presented_label, num_rows, num_cols, figsize=(15,10)
     Limit the number of images plotted by predefined size of figure
     """
     sns.set_style("white")
-    
+
     fig_grid = num_rows * num_cols
     labels = os.listdir(dir_path)
 
