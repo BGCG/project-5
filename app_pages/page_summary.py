@@ -7,7 +7,15 @@ def page_summary():
 
     st.info(
         f"Background information\n"
-        f"Powdery mildew is a fungal infection which effects multiple different flower and fruit plants including the cherry plant\n"
+        f"Powdery mildew is a fungal infection that affects a wide range of plants, including the cherry plant. \n"
+        f"Infection with powdery mildew can cause a white or grayish coating on the leaves of infected plants and sometimes the fruit. \n"
+        f"The fungus spreads through airborne spores and thrives in humid conditions. Infection of plants with powdery mildew can negatively affect\n"
+        f" the overall functioning of the plant, including disrupting photosynthesis. This can result in stunting of growth of the plant as well as overall\n"
+        f" quality and yield of the fruit.\n"
+        f" Powdery mildew can spread easily between infected plants via physical contact with infected plants or fungal airborne spores. Therefore, early detection\n"
+        f" of powdery mildew infection is vital to preserve the overall quality of the crop. \n" 
+        f"Our client, a cherry farmer, is interested in creating a tool to accurately detect whether a cherry leaf is infected with powdery mildew or not, \n"
+        f"in order to allow effective infection monitoring of their crops."
     )
 
     st.success(
