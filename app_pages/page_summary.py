@@ -6,7 +6,7 @@ def page_summary():
     st.write("### Project summary")
 
     st.info(
-        f"Background information\n"
+        f"***Background information:***\n"
         f"Powdery mildew is a fungal infection that affects a wide range of plants, including the cherry plant. \n"
         f"Infection with powdery mildew can cause a white or grayish coating on the leaves of infected plants and sometimes the fruit. \n"
         f"The fungus spreads through airborne spores and thrives in humid conditions. Infection of plants with powdery mildew can negatively affect\n"
@@ -18,8 +18,13 @@ def page_summary():
         f"in order to allow effective infection monitoring of their crops."
     )
 
+    st.info(
+        f"***Project dataset:***\n"
+        f"The dataset was composed of 2104 images of healthy leaves and 2104 images of cherry leaves infected with powdery mildew.\n"
+    )
+
     st.success(
-        f"The project has 2 buisness requirements\n"
+        f"The project has 2 buisness requirements:\n"
         f"* 1 - The client would is interested to have a study to visually differentiate a cherry leaf infected with powdery mildew or not.\n"
         f"* 2 - An machine learning model to predict whether a partiuclar leaf is infected by powdery mildew or not.\n"
     )
