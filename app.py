@@ -8,7 +8,7 @@ from app_pages.project_hypothesis_page import page_project_hypothesis_body
 from app_pages.ml_performance_page import page_ml_performance_metrics
 from app_pages.live_predictor import page_powdery_mildew_predictor
 
-app = Multipage(app_name="Cherry leaves predictor") # Create instance of the app
+app = Multipage(app_name="Powdery mildew predictor") # Create instance of the app
 
 # Add your app pages below using add_page()
 app.add_page("Project summary", page_summary)
