@@ -24,6 +24,7 @@ def leaves_visualiser_body():
 
         st.warning(
             f"We could not observe any explicit pattern that could be used to distinguish infected from uninfected."
+            f"However, a small difference in colour pigment was observed in average images for both labels."
         )
 
         st.image(avg_powdery_mildew, caption="Powdery mildew leaves - Average and Variability")
