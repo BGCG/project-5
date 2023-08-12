@@ -17,7 +17,7 @@ def page_project_hypothesis_body():
     st.info(
         f"As the visualisation of the cherry leaves suggested there was no prominent discernable"
         f" features that could tell if a cherry leaf was infected with powdery mildew or not, "
-        f"we decided that a classification tool would be the best route forward to fullfil the clients request."
+        f"we decided that a classification tool would be the best route forward to fulfill the client's request."
         f"Since the prediction outcome would fall into one of two categories (healthy or powdery mildew infection), "
         f"we decided creation of a binary classification algorithm would be the best approach to build our prediction tool."
     )
