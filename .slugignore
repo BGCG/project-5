@@ -1,4 +1,5 @@
-inputs/
+inputs/cherry_leaves_dataset/cherry-leaves/test/*
+inputs/cherry_leaves_dataset/cherry-leaves/train/*
 attachments/*
 README.md 
 .gitpod.dockerfile
