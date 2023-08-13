@@ -8,5 +8,3 @@ README.md
 .gitpod.yml
 app_pages/__pycache__/*
 jupyter_notebooks/*
-src/__pycache__/*
-src/machine_learning/__pycache__/*
