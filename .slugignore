@@ -1,5 +1,4 @@
 inputs/
-outputs/
 attachments/*
 README.md 
 .gitpod.dockerfile
