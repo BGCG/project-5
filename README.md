@@ -125,3 +125,7 @@ Underneath each plot is some descriptive text, describing the purpose of the plo
 * The user can upload an image of a cherry leaf and then the tool will display the image on the page, display a figure plotting the prediction probability for each label and also a report including the image name and the predicted class.
 * The user can then download the report, by clicking ‘Download report’ where the report will be downloaded to the user's local computer.
 * The user can upload multiple images, to perform predictions on several images and if the user downloads the report, the user will display a new row of a predicted label for the different images.
+
+### Monitoring
+
+Since this project was created for the purpose of the project 5 submission to the Code institute diploma in full stack software development course, monitoring of this app is out of the scope of the purpose of this project. However, in a real world scenario I would monitor the app to ensure it was making accurate predictions and welcome any feedback from the client. If an excess of inaccurate predictions were detected, I would go back and create a new model from the model described in this study where I found fine tune the parameters to ensure we could detect accurately whether a leaf was infected or not, and thereby ensure the client’s business requirements were being met and ultimately improving the clients relations and satisfaction.
