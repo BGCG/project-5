@@ -56,3 +56,33 @@ Validation: To further address the issue of the model not being to generalise we
 ##### Hypothesis 4: Usage of the adam optimiser over adagrad optimiser improves model performance
 
 Validation: We initially explored the usage of different optimisers to determine what would lead to the best performance, while also reducing the change of overfitting. Usage of the adagrad optimiser results in a slow and steady increase in accuracy score but ultimately when the data was exposed to the test set, the accuracy dropped to 80%. We initially explored the `adagrad` optimiser to address concerns about model overfitting. However, following these findings we decided it would be best to explore different optimisers. The `adam` optimiser is popular as it utilises a combination of adaptive learning rates with momentum which can result in higher learning rates. However, increased learning rates in training does not necessarily mean that there is better model performance on test data. I initially found that without using regularisation techniques such as internal drop out layers and image augmentation, we still got reduced accuracy on the test set (89%). Therefore, we found usage of the regularisation techniques outlined above (dropout and image augmentation) to challenge the model, in addition to usage of the `adam` optimiser resulted in an increased accuracy score (99.2%) when evaluating the model performance on the test set.
+
+#### Model building
+
+With the knowledge gained from our data visualisation study and our exploration of regularisation techniques and different hyperparameters, we constructed a high performance model for predicting whether a leaf is infected in powdery mildew or not. The model architecture is described below:
+
+##### Model basic architecture
+
+* `Sequential` model blueprint for building the neural network into a linear sequence of layers.
+* `input layer` initial layer when data is put into the network for processing, the expected image shape was specified here - (256, 256, 3).
+* `hidden layers` where the information is processed from the input data where the features and patterns are extracted.
+* `fully connected layer` where every neuron is linked to every neuron in the previous and subsequent layers
+* `output layers` is the layer where the decision making happens - where the final predictions are based on the patterns and features learnt in the hidden layers during training.
+
+##### Model key features
+
+* `Conv2D` layers for feature extraction by acting as a small matrix that scans over an input image, carrying out convolution actions to extract features from the image.
+* `ReLU` activation functions to selectively activate or deactivate neurons based on the nature of the signals received.
+* `Maxpooling` layer here a sliding window (2x2) migrates across the input feature map and at each position selects the maximum within the window and places it in the output, while others are disposed. This process captures the most notable features such as patterns and textures.
+A dropout layer in the hidden layer to temporarily deactivate a number of randomly selected neurons in the hidden layers by setting their outputs to zero. This was introduced to reduce overfitting by preventing the network from depending on any single neuron during training.
+* `Sigmoid` activation in the output layer to introduce non-linearity to enable the network to model complex relations to make predictions.
+* `Adam` optimiser which utilises a combination of adaptive learning rates with momentum
+* `binary_crossentropy` quantifies the ability of the model’s predicted probability to match the binary labels.
+
+#### Model Evaluation and hypothesis validation summary
+
+Careful construction of the model with the help of regularisation techniques (internal dropout and image augmentation) and usage of the `adam` optimiser resulted in a model that predicted the correct labels with an accuracy of 99.2% while performing the test set evaluation.
+
+Evaluation of the model performance on the test set of data are shown below:
+
+In summary, the study showed that the model could make highly accurate predictions on test data (accuracy score of 99.2%), confirming we have met our business requirements for the client.
