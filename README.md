@@ -169,3 +169,31 @@ All known bugs have been fixed to the best of my knowledge. However, the trouble
 * I encountered the error `AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'` When trying to use the resampling filter ANTIALIAS` to reducing aliasing atrifacts when resizing the input image on the live_predictor page. Search on [stack overflow](https://stackoverflow.com/questions/76616042/attributeerror-module-pil-image-has-no-attribute-antialias) found this was due to me initially using Pillow version 10, where this attribute was not available. Changing the Pillow version to 9.5.0 resolved this issue.
 * Additionally, when creating the functionality to ensure that multiple predictions can be contained within one report download on the live_predictor page, I initially tried to append each new result to a list (ie when the user uploads multiple images and then a prediction is run on them), I got the error `Error "'DataFrame' object has no attribute 'append'"`. Searching on [stack overflow](https://stackoverflow.com/questions/75956209/error-dataframe-object-has-no-attribute-append) found that as of pandas 2.0 `append` was depreciated. Instead as suggested in the stack, I used the `.loc` accessor to allow a new row to be added to the pandas dataframe so that a new row can be added to the report with every additional image uploaded and passed through the predictor tool.
 * A simple bug was noticed when I was deploying the app, that when the app was trying to access the plots, images required to build the montage and when trying to perform live predictions on unseen images, I was getting an error that it could not access the resources required to perform these actions. This is because I referenced the inputs/ and outputs/ in the slugignore file and therefore they could not be accessed by the app. Therefore, I removed outputs from the slugignore files, while also just referencing the test and train datasets in the slugignore file.
+
+### Deployment
+
+* Created a `requirements.txt` file so Heroku knows what the required packages are for this project.
+* Change heroku stack to stack 20 by logging into Heroku CLI in your workspace terminal and typing `heroku stack:set heroku-20 -a your-app-name`
+* Go to the heroku dashboard and ‘create a new app’
+* Choose an original name and the country you are building the app from
+* In the settings tab in heroku, set your buildpack to `heroku/python`
+* Connect the app to your Github repo
+* In the manual deploy section, choose the branch you would like to deploy and then press deploy.
+
+### Credits
+
+The [powdery mildew wikipedia page](https://en.wikipedia.org/wiki/Powdery_mildew) for background information on powdery mildew.
+
+#### Code
+
+* Due to my beginner knowledge in machine learning, aspects of this project were loosely based on aspects of the Code Institute predictive analysis Walkthrough01.
+* When constructing the confusion matrix, I found the following [w3schools post](https://www.w3schools.com/python/python_ml_confusion_matrix.asp) helpful.
+* When constructing the ROC plot, I found the following page in the [sklearn documentation helpful](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_curve.html) informative.
+* Creating the precision-recall plot was helped by the learnings from the following page in the [sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html).
+* The [keras documentation](https://keras.io/api/) was helpful when constructing my model.
+* Further credits associated with troubleshooting bugs can be found in the “bugs” section of this README.
+* The [pandas documentation](https://pandas.pydata.org/docs/index.html) was useful when constructing pandas dataframes.
+
+#### Acknowledgements
+
+My mentor, Mo Shami, for advice on this project
