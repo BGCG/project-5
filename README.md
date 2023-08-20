@@ -126,15 +126,21 @@ In summary, the study showed that the model could make highly accurate predictio
 #### ML performance
 
 * When the user clicks on the ‘ML performance’ option on the navigation menu, a page outlining the performance on the machine learning product will be displayed.
-* Firstly a plot of the frequency of samples in healthy and powdery mildew groups, as well as the proportion assigned to training, test and validation groups.<br>
+* Firstly a plot of the frequency of samples in healthy and powdery mildew groups, as well as the proportion assigned to training, test and validation groups.
+
 ![screenshot-label-freq-accuracy-plots](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/ml-performance-label-freq-acc_glnv7e.jpg)
 * Below that is loss and then the accuracy values plotting at each epoch/iteration during the models training.
 Then a confusion matrix which shows all the true positives, true negatives, false positives and false negatives - giving a detailed overview of the model performance on the test set.
+
 ![screenshot-loss-confusion-matrix-plots](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/ml-performance-loss-conf-matrix_gv7mi6.jpg)
+
 * The history plots are followed by the precision-recall plots and ROC plot, which show that the model performed well on test data.
-Underneath each plot is some descriptive text, describing the purpose of the plot and the findings gleaned from the figure.
+* Underneath each plot is some descriptive text, describing the purpose of the plot and the findings gleaned from the figure.
+
 ![screenshot-precision-recall-roc-plots](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/ml-performance-roc-prec-recall_uugbiz.jpg)
+
 * Then there is a table containing the evaluation metrics of loss and accuracy when the test set was applied to the model.
+
 ![screenshot-test-set-performance-table](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/test-set-perform_gd71qg.jpg)
 
 #### Live powdery mildew predictor
@@ -144,11 +150,11 @@ Underneath each plot is some descriptive text, describing the purpose of the plo
 ![screenshot-live-predictor-page](https://res.cloudinary.com/delase5lw/image/upload/v1692530011/live-predictor-upload_qupalb.jpg)
 
 * The user can upload an image of a cherry leaf and then the tool will display the image on the page, display a figure plotting the prediction probability for each label and also a report including the image name and the predicted class.
-* 
+
 ![screenshot-uploaded-image-live-predictor-page](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/live-predictor-upload-img_lryws7.jpg)
 
 * The user can then download the report, by clicking ‘Download report’ where the report will be downloaded to the user's local computer.
-* 
+  
 ![screehshot-result-live-prediction](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/live-predictor-upload-results_feqrr9.jpg)
 
 * The user can upload multiple images, to perform predictions on several images and if the user downloads the report, the user will display a new row of a predicted label for the different images.
