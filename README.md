@@ -102,6 +102,7 @@ In summary, the study showed that the model could make highly accurate predictio
 
 * When the user clicks the ‘Leaf visualiser’ in the menu, the Leaf visualiser page will appear.
 * When the 'difference between average and variability image' is checked the average and variability image is displayed.
+[leaf-visualiser-avg-var-img](https://res.cloudinary.com/delase5lw/image/upload/v1692529650/leaf-visualiser-avg-var-imgs_r9jfgh.jpg)
 * When the 'difference between powdery mildew and healthy leaves' is checked, the difference between the groups images is displayed, allowing the client to observe if there are any differences between the average images between groups.
 * When 'healthy' or 'powdery mildew' is selected and 'create montage' is clicked, then an image montage of the healthy or powdery mildew is created and displayed, allowing the client to view a subset of the images in either group.
 
