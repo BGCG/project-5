@@ -129,3 +129,32 @@ Underneath each plot is some descriptive text, describing the purpose of the plo
 ### Monitoring
 
 Since this project was created for the purpose of the project 5 submission to the Code institute diploma in full stack software development course, monitoring of this app is out of the scope of the purpose of this project. However, in a real world scenario I would monitor the app to ensure it was making accurate predictions and welcome any feedback from the client. If an excess of inaccurate predictions were detected, I would go back and create a new model from the model described in this study where I found fine tune the parameters to ensure we could detect accurately whether a leaf was infected or not, and thereby ensure the client’s business requirements were being met and ultimately improving the clients relations and satisfaction.
+
+### Technologies used
+
+* Gitpod and Codeanywhere were used as the integrated development environment (IDE)
+* Heroku as a platform to deploy the app
+* Streamlit framework to build the dashboard
+* Github for version control
+* Jupyter notebook for the development of the pipeline
+* Kaggle as the data sourcing platform for this project
+
+#### Languages
+
+* Python to program the app
+* Markdown for providing formatting of text in this README and in the Jupyter notebooks
+
+### Libraries used:
+
+* numpy==1.19.2 : For convert images into arrays
+* pandas==1.1.2 : For generating DataFrames for downstream processes
+* matplotlib==3.3.1 : For data visualisation
+* seaborn==0.11.0 : For plotting data and formatting figure
+* plotly==4.12.0 : For plotting data and formatting figure
+* streamlit==0.85.0 : For creating the dashboard
+* scikit-learn==0.24.2 : For analysis of model performance
+* tensorflow-cpu==2.6.0 : For image augmentation, model construction and model evaluation
+* keras==2.6.0 : For image augmentation, model construction and model evaluation
+* protobuf==3.20 : Optimises data interchange between systems
+* altair<5 : For data visualisation
+* Pillow==9.5.0 : For image manipulation
