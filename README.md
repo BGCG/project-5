@@ -144,7 +144,7 @@ Since this project was created for the purpose of the project 5 submission to th
 * Python to program the app
 * Markdown for providing formatting of text in this README and in the Jupyter notebooks
 
-### Libraries used:
+#### Libraries used:
 
 * numpy==1.19.2 : For convert images into arrays
 * pandas==1.1.2 : For generating DataFrames for downstream processes
@@ -158,3 +158,14 @@ Since this project was created for the purpose of the project 5 submission to th
 * protobuf==3.20 : Optimises data interchange between systems
 * altair<5 : For data visualisation
 * Pillow==9.5.0 : For image manipulation
+
+### Manual testing
+
+The manual testing of the app has been documented in the table below:
+
+### Bugs
+
+All known bugs have been fixed to the best of my knowledge. However, the troubleshooting and resolution of a number of bugs identified in development are described below:
+* I encountered the error `AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'` When trying to use the resampling filter ANTIALIAS` to reducing aliasing atrifacts when resizing the input image on the live_predictor page. Search on [stack overflow](https://stackoverflow.com/questions/76616042/attributeerror-module-pil-image-has-no-attribute-antialias) found this was due to me initially using Pillow version 10, where this attribute was not available. Changing the Pillow version to 9.5.0 resolved this issue.
+* Additionally, when creating the functionality to ensure that multiple predictions can be contained within one report download on the live_predictor page, I initially tried to append each new result to a list (ie when the user uploads multiple images and then a prediction is run on them), I got the error `Error "'DataFrame' object has no attribute 'append'"`. Searching on [stack overflow](https://stackoverflow.com/questions/75956209/error-dataframe-object-has-no-attribute-append) found that as of pandas 2.0 `append` was depreciated. Instead as suggested in the stack, I used the `.loc` accessor to allow a new row to be added to the pandas dataframe so that a new row can be added to the report with every additional image uploaded and passed through the predictor tool.
+* A simple bug was noticed when I was deploying the app, that when the app was trying to access the plots, images required to build the montage and when trying to perform live predictions on unseen images, I was getting an error that it could not access the resources required to perform these actions. This is because I referenced the inputs/ and outputs/ in the slugignore file and therefore they could not be accessed by the app. Therefore, I removed outputs from the slugignore files, while also just referencing the test and train datasets in the slugignore file.
