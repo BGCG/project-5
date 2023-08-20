@@ -41,9 +41,16 @@ Non-image files from cherry leaves image dataset were removed and image files we
 
 Validation: As per the clients requests, we carried our study to see if a cherry leaf was infected with powdery mildew and those that are not, to determine whether there are any visual differences between the two groups. Plotting of an image montage showed that cherry leaves infected with powdery mildew showed that those affected with powdery mildew had white blemishes in the middle of the leaf and the leaf had a shriveled appearance.
 
+![image-montage-readme](https://res.cloudinary.com/delase5lw/image/upload/v1692531645/img-montage-readme_g8ebe7.jpg)
+
 Analysis of the average images and variability images in powdery mildew and unaffected leaves showed again that powdery mildews had more white stripes in the middle and inside the leaf body.
 
+![average-image-comparison-healthy](outputs/v1/avg_var_healthy.png)
+![average-image-comparison-infected](outputs/v1/avg_var_powdery_mildew.png)
+
 However, the difference between the average infected leaf and noninfected leaf showed no clear differences between the two groups. This confirmed that this problem can’t be solved with data analytics alone and that we require a more complex tool to allow us to distinguish between a leaf infected with powdery mildew and one that is not.
+
+![diff-between-averages-image](outputs/v1/avg_diff.png)
 
 ###### Hypothesis 2: Providing a dropout layer in the hidden layer of the network improve prediction accuracy
 
@@ -84,6 +91,7 @@ A dropout layer in the hidden layer to temporarily deactivate a number of random
 Careful construction of the model with the help of regularisation techniques (internal dropout and image augmentation) and usage of the `adam` optimiser resulted in a model that predicted the correct labels with an accuracy of 99.2% while performing the test set evaluation.
 
 Evaluation of the model performance on the test set of data are shown below:
+![screenshot-evaluation-on-test-set](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/test-set-perform_gd71qg.jpg)
 
 In summary, the study showed that the model could make highly accurate predictions on test data (accuracy score of 99.2%), confirming we have met our business requirements for the client.
 
@@ -97,6 +105,7 @@ In summary, the study showed that the model could make highly accurate predictio
 
 * On the project summary page there is some background information about the issue at hand, information about the structure of the dataset and the business requirements.
 * Additionally, there is a link to the README file for this project, in case the client would like any additional information.
+![screenshot-project-summary-page](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/project-summary-page_ngoexp.jpg)
 
 #### Leaf visualiser page
 
@@ -104,27 +113,37 @@ In summary, the study showed that the model could make highly accurate predictio
 * When the 'difference between average and variability image' is checked the average and variability image is displayed.
 ![leaf-visualiser-avg-var-img](https://res.cloudinary.com/delase5lw/image/upload/v1692529650/leaf-visualiser-avg-var-imgs_r9jfgh.jpg)
 * When the 'difference between powdery mildew and healthy leaves' is checked, the difference between the groups images is displayed, allowing the client to observe if there are any differences between the average images between groups.
+![screenshot-diff-between-avg-images](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/leaf-visualiser-diff-avg-imgs_lj4axt.jpg)
 * When 'healthy' or 'powdery mildew' is selected and 'create montage' is clicked, then an image montage of the healthy or powdery mildew is created and displayed, allowing the client to view a subset of the images in either group.
+![screenshot-montage](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/leaf-visualiser-montage_x1oayv.jpg)
 
 #### Project hypothesis page
 
 * If the user clicks ‘Project hypothesis’ in the navigation bar, a page containing text explaining the project hypothesis will appear.
+![screenshot-project-hypothesis-page](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/project-hypothesis-page_usto2b.jpg)
 
 #### ML performance
 
 * When the user clicks on the ‘ML performance’ option on the navigation menu, a page outlining the performance on the machine learning product will be displayed.
 * Firstly a plot of the frequency of samples in healthy and powdery mildew groups, as well as the proportion assigned to training, test and validation groups.
+![screenshot-label-freq-accuracy-plots](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/ml-performance-label-freq-acc_glnv7e.jpg)
 * Below that is loss and then the accuracy values plotting at each epoch/iteration during the models training.
 Then a confusion matrix which shows all the true positives, true negatives, false positives and false negatives - giving a detailed overview of the model performance on the test set.
+![screenshot-loss-confusion-matrix-plots](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/ml-performance-loss-conf-matrix_gv7mi6.jpg)
 * The history plots are followed by the precision-recall plots and ROC plot, which show that the model performed well on test data.
 Underneath each plot is some descriptive text, describing the purpose of the plot and the findings gleaned from the figure.
+![screenshot-precision-recall-roc-plots](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/ml-performance-roc-prec-recall_uugbiz.jpg)
 * Then there is a table containing the evaluation metrics of loss and accuracy when the test set was applied to the model.
+![screenshot-test-set-performance-table](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/test-set-perform_gd71qg.jpg)
 
 #### Live powdery mildew predictor
 
 * When the user clicks on the ‘Live powdery mildew predictor’ option on the navigation menu, a page inviting the user to upload an image is displayed.
+![screenshot-live-predictor-page](https://res.cloudinary.com/delase5lw/image/upload/v1692530011/live-predictor-upload_qupalb.jpg)
 * The user can upload an image of a cherry leaf and then the tool will display the image on the page, display a figure plotting the prediction probability for each label and also a report including the image name and the predicted class.
+![screenshot-uploaded-image-live-predictor-page](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/live-predictor-upload-img_lryws7.jpg)
 * The user can then download the report, by clicking ‘Download report’ where the report will be downloaded to the user's local computer.
+![screehshot-result-live-prediction](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/live-predictor-upload-results_feqrr9.jpg)
 * The user can upload multiple images, to perform predictions on several images and if the user downloads the report, the user will display a new row of a predicted label for the different images.
 
 ### Monitoring
@@ -139,6 +158,7 @@ Since this project was created for the purpose of the project 5 submission to th
 * Github for version control
 * Jupyter notebook for the development of the pipeline
 * Kaggle as the data sourcing platform for this project
+* Cloudinary to host the images displayed in this README.
 
 #### Languages
 
