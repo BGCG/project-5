@@ -91,6 +91,7 @@ A dropout layer in the hidden layer to temporarily deactivate a number of random
 Careful construction of the model with the help of regularisation techniques (internal dropout and image augmentation) and usage of the `adam` optimiser resulted in a model that predicted the correct labels with an accuracy of 99.2% while performing the test set evaluation.
 
 Evaluation of the model performance on the test set of data are shown below:
+
 ![screenshot-evaluation-on-test-set](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/test-set-perform_gd71qg.jpg)
 
 In summary, the study showed that the model could make highly accurate predictions on test data (accuracy score of 99.2%), confirming we have met our business requirements for the client.
@@ -125,7 +126,7 @@ In summary, the study showed that the model could make highly accurate predictio
 #### ML performance
 
 * When the user clicks on the ‘ML performance’ option on the navigation menu, a page outlining the performance on the machine learning product will be displayed.
-* Firstly a plot of the frequency of samples in healthy and powdery mildew groups, as well as the proportion assigned to training, test and validation groups.
+* Firstly a plot of the frequency of samples in healthy and powdery mildew groups, as well as the proportion assigned to training, test and validation groups.<br>
 ![screenshot-label-freq-accuracy-plots](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/ml-performance-label-freq-acc_glnv7e.jpg)
 * Below that is loss and then the accuracy values plotting at each epoch/iteration during the models training.
 Then a confusion matrix which shows all the true positives, true negatives, false positives and false negatives - giving a detailed overview of the model performance on the test set.
@@ -139,11 +140,17 @@ Underneath each plot is some descriptive text, describing the purpose of the plo
 #### Live powdery mildew predictor
 
 * When the user clicks on the ‘Live powdery mildew predictor’ option on the navigation menu, a page inviting the user to upload an image is displayed.
+
 ![screenshot-live-predictor-page](https://res.cloudinary.com/delase5lw/image/upload/v1692530011/live-predictor-upload_qupalb.jpg)
+
 * The user can upload an image of a cherry leaf and then the tool will display the image on the page, display a figure plotting the prediction probability for each label and also a report including the image name and the predicted class.
+* 
 ![screenshot-uploaded-image-live-predictor-page](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/live-predictor-upload-img_lryws7.jpg)
+
 * The user can then download the report, by clicking ‘Download report’ where the report will be downloaded to the user's local computer.
+* 
 ![screehshot-result-live-prediction](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/live-predictor-upload-results_feqrr9.jpg)
+
 * The user can upload multiple images, to perform predictions on several images and if the user downloads the report, the user will display a new row of a predicted label for the different images.
 
 ### Monitoring
