@@ -86,3 +86,42 @@ Careful construction of the model with the help of regularisation techniques (in
 Evaluation of the model performance on the test set of data are shown below:
 
 In summary, the study showed that the model could make highly accurate predictions on test data (accuracy score of 99.2%), confirming we have met our business requirements for the client.
+
+### Deployment phase - dashboard implementation and features
+
+* Streamlit was used to build the dashboard which is an open-source python library allowing the timely creation of web apps.
+* The dashboard provides an interactive interface allowing the client to view the results of the study and use the machine learning tool. 
+* The app has an interactive navigation panel, allowing the client to easily navigate between the pages.
+
+#### Project summary page
+
+* On the project summary page there is some background information about the issue at hand, information about the structure of the dataset and the business requirements.
+* Additionally, there is a link to the README file for this project, in case the client would like any additional information.
+
+#### Leaf visualiser page
+
+* When the user clicks the ‘Leaf visualiser’ in the menu, the Leaf visualiser page will appear.
+* When the 'difference between average and variability image' is checked the average and variability image is displayed.
+* When the 'difference between powdery mildew and healthy leaves' is checked, the difference between the groups images is displayed, allowing the client to observe if there are any differences between the average images between groups.
+* When 'healthy' or 'powdery mildew' is selected and 'create montage' is clicked, then an image montage of the healthy or powdery mildew is created and displayed, allowing the client to view a subset of the images in either group.
+
+#### Project hypothesis page
+
+* If the user clicks ‘Project hypothesis’ in the navigation bar, a page containing text explaining the project hypothesis will appear.
+
+#### ML performance
+
+* When the user clicks on the ‘ML performance’ option on the navigation menu, a page outlining the performance on the machine learning product will be displayed.
+* Firstly a plot of the frequency of samples in healthy and powdery mildew groups, as well as the proportion assigned to training, test and validation groups.
+* Below that is loss and then the accuracy values plotting at each epoch/iteration during the models training.
+Then a confusion matrix which shows all the true positives, true negatives, false positives and false negatives - giving a detailed overview of the model performance on the test set.
+* The history plots are followed by the precision-recall plots and ROC plot, which show that the model performed well on test data.
+Underneath each plot is some descriptive text, describing the purpose of the plot and the findings gleaned from the figure.
+* Then there is a table containing the evaluation metrics of loss and accuracy when the test set was applied to the model.
+
+#### Live powdery mildew predictor
+
+* When the user clicks on the ‘Live powdery mildew predictor’ option on the navigation menu, a page inviting the user to upload an image is displayed.
+* The user can upload an image of a cherry leaf and then the tool will display the image on the page, display a figure plotting the prediction probability for each label and also a report including the image name and the predicted class.
+* The user can then download the report, by clicking ‘Download report’ where the report will be downloaded to the user's local computer.
+* The user can upload multiple images, to perform predictions on several images and if the user downloads the report, the user will display a new row of a predicted label for the different images.
