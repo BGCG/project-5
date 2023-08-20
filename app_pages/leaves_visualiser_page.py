@@ -94,7 +94,6 @@ def image_montage(dir_path, presented_label, num_rows, num_cols, figsize=(15,10)
             axes[plot_idx[x][0], plot_idx[x][1]].set_yticks([])
         plt.tight_layout()
         st.pyplot(fig=fig)
-        # plt.show()
 
     else:
         print("The label you selected doesn't exist")
