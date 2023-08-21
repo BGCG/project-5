@@ -31,7 +31,7 @@ def page_powdery_mildew_predictor():
 
     st.write(
         f"You can download a set of healthy and powdery mildew infected "
-        f"leaf images for live predictions from here"
+        f"leaf images for live predictions from [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)"
     )
 
     st.write("---")
