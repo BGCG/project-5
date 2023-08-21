@@ -28,3 +28,13 @@ def page_project_hypothesis_body():
         f"Since the prediction outcome would fall into one of two categories (healthy or powdery mildew infection), "
         f"we decided creation of a binary classification algorithm would be the best approach to build our prediction tool."
     )
+
+    st.success(
+        f"We hypothesised usage of the adam optimiser in our model along with performing regularisation techniques such as"
+        f"image augmentation and internal dropout layers in our model, to improve the models ability to generalise, would result"
+        f" in the model to meet the clients perfromance goal of 97% accuracy. Our hypothesis was validated as evaluation of the model "
+        f"with the test set yeilded a 99.2% accuracy, which met our clients goals."
+        f"Therefore, in conclusion we were sucessful in the creation of a machine learning model to predict whether a "
+        f" cherry leaf is infected with powdery mildew or not. Further details about the model can be found on the ML "
+        f"perfromance page of this dashboard."
+    )
