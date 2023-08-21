@@ -31,7 +31,7 @@ The business case can be broken down into the following user stories:
 The dataset consisted of 2104 images of cherry leaves that were infected with powdery mildew and 2104 images of cherry leaves that were healthy. The dataset was downloaded from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
 
 ### Data preparation 
-Non-image files from cherry leaves image dataset were removed and image files were split the images into train, validation and test in a 7:2:1 ratio.
+Non-image files from cherry leaves image dataset were removed and image files were split the images into train, validation and test in a 7:1:2 ratio.
 
 ### Modeling
 
