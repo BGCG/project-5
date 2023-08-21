@@ -6,6 +6,13 @@ from src.machine_learning.evaluate_clf import load_test_evaluation
 
 
 def page_ml_performance_metrics():
+
+    """
+    Render text going through the machine learning performance 
+    Render the plots describing the machine learning performance
+    Load the evaluation pickle so user can see test set evaludaiton accuracy and loss scores
+    """
+
     version = 'v1'
 
     st.write("Train, Validation and Test set: Label frequencies")

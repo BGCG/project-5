@@ -9,7 +9,16 @@ from matplotlib.image import imread
 import itertools
 import random
 
+
 def leaves_visualiser_body():
+
+    """ 
+    Create check box and render appropriate image based on if the corresponding 
+    check box is checked
+    If image montage box is checked, call image_montage function to create image montage of
+    group based on what group the user selected
+    """
+    
     st.write("### Leaves visualiser")
     st.info(
         f"The client would is interested to have a study to visually\n"
@@ -31,7 +40,6 @@ def leaves_visualiser_body():
         st.image(avg_healthy, caption="Healthy leaves - Average and Variability")
         st.write("---")
 
-    
     if st.checkbox("Differences between average powdery mildew and healthy leaves"):
         diff_bet_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
@@ -49,6 +57,7 @@ def leaves_visualiser_body():
         if st.button("Create Montage"):
             image_montage(data_dir+'/validation', presented_label=label_to_display, num_rows=8, num_cols=3, figsize=(10,25))
             st.write("---")
+
 
 def image_montage(dir_path, presented_label, num_rows, num_cols, figsize=(15,10)):
 

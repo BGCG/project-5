@@ -1,7 +1,14 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
+
 def page_project_hypothesis_body():
+
+    """
+    Render text describing project hypothesis to provide information to the user about the
+    purpose of the page
+    """
+
     st.write("### Project Hypothesis and validation")
 
     st.success(

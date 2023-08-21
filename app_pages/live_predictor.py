@@ -12,6 +12,18 @@ from src.machine_learning.predictive_analysis import (
 
 def page_powdery_mildew_predictor():
 
+    """
+    Create file upload section using st.uploader and allow multiple files to be uploaded.
+    Check if images been uploaded and create a pandas dataframe with two columns - 'Name' and 'Result'
+    Loop through images uploaded and convert to array
+    Display each image uploaded
+    Resize each image uploaded
+    Call load_and_predict function, passing in resized image
+    Call plot_prediction_probabilities, passing in prediction probability results
+    Add new entry into dataframe
+    Allow report download by calling download_dataframe_as_csv with report passed into it
+    """
+
     st.info(
         f"* The client is interested in determining whether a given leaf is "
         f"infected with Powdery Mildew or not."

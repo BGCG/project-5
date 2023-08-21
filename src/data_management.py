@@ -5,7 +5,14 @@ import base64
 from datetime import datetime
 import joblib
 
+
 def download_dataframe_as_csv(df):
+
+    """
+    Create date variable with today date in desired format
+    convert dataframe to csv and encode in base64
+    Return HTML link to allow user to download report
+    """
 
     datetime_now = datetime.now().strftime("%d%b%Y_%Hh%Mmin%Ss")
     csv = df.to_csv().encode()
@@ -18,4 +25,7 @@ def download_dataframe_as_csv(df):
 
 
 def load_pkl_file(file_path):
+    """
+    Function to load data from file using Joblib library
+    """
     return joblib.load(filename=file_path)

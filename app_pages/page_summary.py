@@ -1,7 +1,13 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
+
 def page_summary():
+
+    """
+    Render text describing project summary to provide information to the user about the
+    purpose of the page
+    """
 
     st.write("### Project summary")
 
