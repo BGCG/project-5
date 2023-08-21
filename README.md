@@ -197,6 +197,8 @@ Since this project was created for the purpose of the project 5 submission to th
 
 The manual testing of the app has been documented in the table below:
 
+![manual-testing-table](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/manual-testing_ja51uw.jpg)
+
 ### Bugs
 
 All known bugs have been fixed to the best of my knowledge. However, the troubleshooting and resolution of a number of bugs identified in development are described below:
