@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 # Class to create multiple Streamlit pages and run method to navigate between them
 class Multipage:
 
@@ -11,7 +12,7 @@ class Multipage:
            page_title=self.app_name,
            page_icon=":seedling:")
            # short code for page icon from https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
-    
+
     def add_page(self, title, func) -> None:
         self.pages.append({"title": title, "function": func})
 

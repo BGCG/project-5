@@ -18,7 +18,7 @@ def leaves_visualiser_body():
     If image montage box is checked, call image_montage function to create image montage of
     group based on what group the user selected
     """
-    
+ 
     st.write("### Leaves visualiser")
     st.info(
         f"The client would is interested to have a study to visually\n"
@@ -65,7 +65,7 @@ def image_montage(dir_path, presented_label, num_rows, num_cols, figsize=(15,10)
     Check if label exists in specified directory
     Check if size of montage exceeds the subset size
     Generate a list of axes indices based on subset size
-    Loop through images and plot them 
+    Loop through images and plot them
     Limit the number of images plotted by predefined size of figure
     """
     sns.set_style("white")

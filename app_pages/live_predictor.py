@@ -13,8 +13,10 @@ from src.machine_learning.predictive_analysis import (
 def page_powdery_mildew_predictor():
 
     """
-    Create file upload section using st.uploader and allow multiple files to be uploaded.
-    Check if images been uploaded and create a pandas dataframe with two columns - 'Name' and 'Result'
+    Create file upload section using st.uploader and allow multiple files to 
+    be uploaded.
+    Check if images been uploaded and create a pandas dataframe with two 
+    columns - 'Name' and 'Result'
     Loop through images uploaded and convert to array
     Display each image uploaded
     Resize each image uploaded
@@ -56,7 +58,7 @@ def page_powdery_mildew_predictor():
             pred_proba, predicted_class = load_model_and_predict(resized_image, version=version)
             plot_prediction_probabilities(pred_proba, predicted_class)
 
-            new_data = {"Name":image.name, "Result": predicted_class}
+            new_data = {"Name": image.name, "Result": predicted_class}
 
             df_report.loc[len(df_report)] = new_data
 

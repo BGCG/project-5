@@ -66,5 +66,5 @@ def load_model_and_predict(my_image, version):
         f"The predictive analysis indicates the sample leaf is infected with "
         f"**{predicted_class.lower()}**")
 
-    
+
     return pred_proba, predicted_class
