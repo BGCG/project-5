@@ -199,6 +199,10 @@ The manual testing of the app has been documented in the table below:
 
 ![manual-testing-table](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/manual-testing_ja51uw.jpg)
 
+### PEP8 validation
+
+I utilised the PEP8 validation tool pycodestyle by running `pycodestyle .` in the workspace terminal. Then I corrected any errors until all except for minor 'line too long errors' were resolved.
+
 ### Bugs
 
 All known bugs have been fixed to the best of my knowledge. However, the troubleshooting and resolution of a number of bugs identified in development are described below:
