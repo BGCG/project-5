@@ -13,9 +13,9 @@ from src.machine_learning.predictive_analysis import (
 def page_powdery_mildew_predictor():
 
     """
-    Create file upload section using st.uploader and allow multiple files to 
+    Create file upload section using st.uploader and allow multiple files to
     be uploaded.
-    Check if images been uploaded and create a pandas dataframe with two 
+    Check if images been uploaded and create a pandas dataframe with two
     columns - 'Name' and 'Result'
     Loop through images uploaded and convert to array
     Display each image uploaded

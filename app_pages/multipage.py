@@ -11,7 +11,7 @@ class Multipage:
         st.set_page_config(
            page_title=self.app_name,
            page_icon=":seedling:")
-           # short code for page icon from https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
+        # short code for page icon from https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
 
     def add_page(self, title, func) -> None:
         self.pages.append({"title": title, "function": func})

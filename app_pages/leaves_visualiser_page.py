@@ -12,13 +12,13 @@ import random
 
 def leaves_visualiser_body():
 
-    """ 
-    Create check box and render appropriate image based on if the corresponding 
+    """
+    Create check box and render appropriate image based on if the corresponding
     check box is checked
     If image montage box is checked, call image_montage function to create image montage of
     group based on what group the user selected
     """
- 
+
     st.write("### Leaves visualiser")
     st.info(
         f"The client would is interested to have a study to visually\n"
@@ -55,11 +55,11 @@ def leaves_visualiser_body():
         labels = os.listdir(data_dir+'/validation')
         label_to_display = st.selectbox(label="Select label", options=labels, index=0)
         if st.button("Create Montage"):
-            image_montage(data_dir+'/validation', presented_label=label_to_display, num_rows=8, num_cols=3, figsize=(10,25))
+            image_montage(data_dir+'/validation', presented_label=label_to_display, num_rows=8, num_cols=3, figsize=(10, 25))
             st.write("---")
 
 
-def image_montage(dir_path, presented_label, num_rows, num_cols, figsize=(15,10)):
+def image_montage(dir_path, presented_label, num_rows, num_cols, figsize=(15, 10)):
 
     """
     Check if label exists in specified directory
@@ -75,25 +75,25 @@ def image_montage(dir_path, presented_label, num_rows, num_cols, figsize=(15,10)
 
     if presented_label in labels:
         img_lst = os.listdir(dir_path + '/' + presented_label)
-         
+
         if fig_grid < len(img_lst):
             # select random image
             img_idx = np.random.choice(img_lst, num_rows * num_cols)
-            
+
         else:
             print(f'There are {len(img_lst)} in your subset..\n'
                   f'but you requested a montage with {nrows * ncols} spaces. \n'
                   f'Decrease your number of cols or number of rows in your requested montage')
             return
-        
+
         # create list of axes indices based on num_rows and num_cols
         lst_rows = range(0, num_rows)
         lst_cols = range(0, num_cols)
-        plot_idx = list(itertools.product(lst_rows,lst_cols))
+        plot_idx = list(itertools.product(lst_rows, lst_cols))
 
         # create plot and display images
         fig, axes = plt.subplots(nrows=num_rows, ncols=num_cols, figsize=figsize)
-    
+
         for x in range(0, fig_grid):
             img = imread(dir_path + '/' + presented_label + '/' + img_idx[x])
             img_shape = img.shape

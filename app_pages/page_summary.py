@@ -19,7 +19,7 @@ def page_summary():
         f" the overall functioning of the plant, including disrupting photosynthesis. This can result in stunting of growth of the plant as well as overall\n"
         f" quality and yield of the fruit.\n"
         f" Powdery mildew can spread easily between infected plants via physical contact with infected plants or fungal airborne spores. Therefore, early detection\n"
-        f" of powdery mildew infection is vital to preserve the overall quality of the crop. \n" 
+        f" of powdery mildew infection is vital to preserve the overall quality of the crop. \n"
         f"Our client, a cherry farmer, is interested in creating a tool to accurately detect whether a cherry leaf is infected with powdery mildew or not, \n"
         f"in order to allow effective infection monitoring of their crops."
     )
