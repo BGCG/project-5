@@ -208,13 +208,25 @@ All known bugs have been fixed to the best of my knowledge. However, the trouble
 
 ### Deployment
 
-* Created a `requirements.txt` file so Heroku knows what the required packages are for this project.
-* Change heroku stack to stack 20 by logging into Heroku CLI in your workspace terminal and typing `heroku stack:set heroku-20 -a your-app-name`
+* Created a `requirements.txt` file so Heroku knows what the required packages are for this project by typing `pip freeze > requirements.txt` in your workspace terminal.
+* Ensure that the python version specified in `runtime.txt` is a heroku stack 20 supported version.
+* Create a `Procfile` and inside it define your configuration settings which will define it's set up requirements (as defined by `setup.sh`) and the command to run the streamlit app from.
+* Push your most recent changes to your github repo by commiting them by `git add .`, `git commit -m 'My commit message'` and then push them to the repo by pushing to the github repo `git push`.
 * Go to the heroku dashboard and ‘create a new app’
-* Choose an original name and the country you are building the app from
+
+![heroku-create-app-step1](https://res.cloudinary.com/delase5lw/image/upload/v1693128847/heroku-create-app_vhhahc.jpg)
+* In heroku, choose an original name and the country you are building the app from
+  
+![heroku-create-app-step2](https://res.cloudinary.com/delase5lw/image/upload/v1693128847/heroku-create-app-pt2_crlzyp.jpg)
+* Back in your workspance terminal, change heroku stack to stack 20 by logging into Heroku CLI by typing `heroku login -i` and your heroku credientials when prompted in your workspace terminal. Once your are logged in to heroku, change the heroku stack to 20 by typing `heroku stack:set heroku-20 -a your-app-name` (your app name is your app name as chosen when you created the app on heroku) in your workspace terminal.
 * In the settings tab in heroku, set your buildpack to `heroku/python`
-* Connect the app to your Github repo
-* In the manual deploy section, choose the branch you would like to deploy and then press deploy.
+* In the deploy tab in heroku, connect the app to your Github repo by selecting the name of your github repo and pressing connect.
+
+![heroku-github-repo-connect](https://res.cloudinary.com/delase5lw/image/upload/v1693129638/heroku-github-connect_nw2jlf.jpg)
+* In the manual deploy section, choose the branch you would like to deploy and then press `deploy to branch`.
+
+![heroku-deploy-app](https://res.cloudinary.com/delase5lw/image/upload/v1693128847/heroku-manual-deploy_pbjy0w.jpg)
+* During deployment, if your slugsize is too large causing your app to not deploy, reference files you do not need for your deployed app to function by noting these in the `.slugignore` file.
 
 ### Credits
 
