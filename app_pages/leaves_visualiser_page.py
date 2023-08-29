@@ -21,7 +21,7 @@ def leaves_visualiser_body():
 
     st.write("### Leaves visualiser")
     st.info(
-        f"The client would is interested to have a study to visually\n"
+        f"The client is interested to have a study to visually\n"
         f"differentiate a cherry leaf infected with powdery mildew or not."
     )
 
