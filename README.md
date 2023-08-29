@@ -24,7 +24,7 @@ The business requirements are:
 1. The client would like a study conducted to visually differentiate between a cherry plant infected with powdery mildew and one that is not.
 2. The client would like to be able to detect whether a cherry leaf is infected with powdery mildew or not.
 
-The business case can be broken down into the user stories discussed in this section. Note: User stories were separated into MUST HAVE, SHOULD HAVE, COULD HAVE AND SHOULDN'T HAVE. All user stories labelled as SHOULD HAVE were completed. Additionally, there were a number of users stores that were directed at the Machine learning (ML) scientists perspective, these along with the client-side user stories are available to view in the following [Github board](https://github.com/users/BGCG/projects/7/views/1)
+The business case can be broken down into the user stories discussed in this section. Note: User stories were separated into MUST HAVE, SHOULD HAVE, COULD HAVE AND SHOULDN'T HAVE. All user stories labelled as SHOULD HAVE were completed. Additionally, there were a number of users stores that were directed at the Machine learning (ML) scientists perspective, these along with the client-side user stories are available to view in the following [Github board](https://github.com/users/BGCG/projects/7/views/1).
 
 **Client user stories**
 
