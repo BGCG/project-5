@@ -61,7 +61,7 @@ Business requirement 1: **The client would like us to conduct a study to visuall
 
 Business requirement 1 maps to the following user story: As a client, I can see a study comparing the leaves infected with powdery mildew or not so I can see if there are any discriminatory features between the two groups
 
-We will tackle this user story by performing a study to determine whether we can visually differentiate a leaf infected with powdery mildew and one not infected with powdery mildew. This will allow us to determine whether the powdery  mildew can cause visual difference in the cherry leaves and also will give us a clue to whether the client's request of developing a tool to detect powdery mildew in cherry leaves can be solved by image analysis alone.
+I will tackle this user story by performing a study to determine whether we can visually differentiate a leaf infected with powdery mildew and one not infected with powdery mildew. This will allow us to determine whether the powdery  mildew can cause visual difference in the cherry leaves and also will give us a clue to whether the client's request of developing a tool to detect powdery mildew in cherry leaves can be solved by image analysis alone.
 
 Business requirement 2: **The client would like to detect whether a cherry leaf has powdery mildew or not.**
 
