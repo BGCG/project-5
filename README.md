@@ -126,7 +126,7 @@ Validation: As per the clients requests, we carried our study to see if a cherry
 
 ![image-montage-readme](https://res.cloudinary.com/delase5lw/image/upload/v1692531645/img-montage-readme_g8ebe7.jpg)
 
-Evaluation approach: Analysis of the average images and variability images in powdery mildew and unaffected leaves showed again that powdery mildews had more white stripes in the middle and inside the leaf body.
+Analysis of the average images and variability images in powdery mildew and unaffected leaves showed again that powdery mildews had more white stripes in the middle and inside the leaf body.
 
 ![average-image-comparison-healthy](outputs/v1/avg_var_healthy.png)
 ![average-image-comparison-infected](outputs/v1/avg_var_powdery_mildew.png)
@@ -137,7 +137,7 @@ However, the difference between the average infected leaf and noninfected leaf s
 
 ###### Hypothesis 2: Providing a dropout layer in the hidden layer of the network improve prediction accuracy
 
-In our initial work, we created a basic model as described in the 'basic model architecture' and 'key model features' but we did not have an internal dropout layers in it and later performed some hyperparameter optimisation (specifically with deciding which optimiser to use) as described in the remainder of this section. Our final model's performance was best when using a combination of regluarisation techniques and different hyperparameters, therefore we will present a table comparing the different models performance when using different parameters and regualarisation techniques at the end of the hypothesis and validation section.
+In our initial work, we created a basic model as described in the 'Model Basic Architecture' and 'Model Key Features' except for intially we did not have an internal dropout layers in it and later performed some hyperparameter optimisation (specifically with deciding which optimiser to use) as described in the remainder of this section. Our final model's performance was best when using a combination of regluarisation techniques and different hyperparameters, therefore we will present a table comparing the different models performance when using different parameters and regualarisation techniques at the end of the hypothesis and validation section.
 
 Validation: When evaluating the test data on the basic model, the accuracy score reduced to 98%. Although this performance was very good, we wanted to ensure that the model was robust when exposed to a variety of different image data. Therefore, in order to make the job harder to learn from the train data to provide a more steady but accurate pace of learning, I decided to put in a dropout layer in the hidden layer to deactivate a randomly set of neurons to improve the network’s generalisation ability. I trained the new adapted model on the train set and then evaluated its performance on the test set. This in combination with other regularisation techniques (such as image augmentation) resulted in an accuracy score of 99.2% when the model was evaluated on test data.
 
