@@ -19,7 +19,7 @@ def leaves_visualiser_body():
     group based on what group the user selected
     """
 
-    st.write("### Leaves visualiser")
+    st.write("### Leaf visualiser")
     st.info(
         f"The client is interested to have a study to visually\n"
         f"differentiate a cherry leaf infected with powdery mildew or not."

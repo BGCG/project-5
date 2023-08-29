@@ -17,8 +17,8 @@ def page_summary():
         f"The fungus spreads through airborne spores and thrives in humid conditions. Infection of plants with powdery mildew can negatively affect\n"
         f" the overall functioning of the plant, including disrupting photosynthesis. This can result in stunting of growth of the plant as well as overall\n"
         f" quality and yield of the fruit.\n"
-        f" Powdery mildew can spread easily between infected plants via physical contact with infected plants or fungal airborne spores. Therefore, early detection\n"
-        f" of powdery mildew infection is vital to preserve the overall quality of the crop. \n"
+        f" Powdery mildew can spread easily between plants via physical contact with infected plants or fungal airborne spores. Therefore, early detection\n"
+        f" of powdery mildew infection is vital to preserve the overall quality of a crop. \n"
         f"Our client, a cherry farmer, is interested in creating a tool to accurately detect whether a cherry leaf is infected with powdery mildew or not, \n"
         f"in order to allow effective infection monitoring of their crops."
     )
@@ -30,7 +30,7 @@ def page_summary():
 
     st.success(
         f"The project has 2 business requirements:\n"
-        f"* 1 - The client would is interested to have a study to visually differentiate a cherry leaf infected with powdery mildew or not.\n"
+        f"* 1 - The client is interested to have a study to visually differentiate a cherry leaf infected with powdery mildew or not.\n"
         f"* 2 - The client would like to be able to detect whether a cherry leaf is infected with powdery mildew or not.\n"
     )
 

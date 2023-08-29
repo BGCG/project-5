@@ -34,9 +34,9 @@ def page_ml_performance_metrics():
 
     model_loss = plt.imread(f"outputs/{version}/model_training_loss.png")
     st.image(model_loss, caption="Model Training losses")
-    st.success("Plotting of loss during each successive iteration during model training showed that loss decreased over while training, "
+    st.success("Plotting of loss during each successive iteration during model training showed that loss decreased overall while training, "
                "suggestive that the model is adjusting it parameters to fit the training data and is improving its ability to detect "
-               "patterns in the train data and reduce errors. Additionally, the validation loss also decreasing in a similar "
+               "patterns in the train data and reduce errors. Additionally, the validation loss is also decreasing in a similar "
                "fashion to that seen in the training data suggestive that the model is generalising well to unseen data.")
 
     conf_matrix = plt.imread(f"outputs/{version}/conf_matrix.png")
@@ -48,7 +48,7 @@ def page_ml_performance_metrics():
 
     roc_plot = plt.imread(f"outputs/{version}/roc_plot.png")
     st.image(roc_plot, caption="ROC plot")
-    st.success("The ROC plot is a plot to evaluation the models ability to accurately distinguish between classes by plotting the false positive"
+    st.success("The ROC plot is a plot to evaluate the models ability to accurately distinguish between classes by plotting the false positive"
                "rate by the true positive rate. Plotting the false positive rate by the true positive rate suggested the model is very good at "
                "predicting the positive class, as the false positive rate was consistently near 0 and the true positive rate consistently close to 1."
                " The AUC, which is used to summarise the overall performance, was 1.0 suggestive that the model is good a distinguishing between classes.")

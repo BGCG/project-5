@@ -30,14 +30,14 @@ def page_project_hypothesis_body():
     )
 
     st.success(
-        f"We hypothesised usage of the adam optimiser in our model, along with performing regularisation techniques such as"
-        f" image augmentation and internal dropout layers, will improve the models ability to generalise and would result"
-        f" in the model to meet the clients performance goal of 97% accuracy."
+        f"We hypothesised usage of the adam optimiser in our model, along with performing regularisation techniques, such as"
+        f" image augmentation and dropout layers in hidden layers, will improve the models ability to generalise and would result"
+        f" in the model meeting the clients performance goal of 97% accuracy."
         F" We evaluated our hypotheses by adjusting our hyperparameters (usage of the adam optimiser) and regularisation "
-        f"techniques (introduction of an internal dropout layer) and then performed an evaluation of the adapted model on the test"
+        f"techniques (introduction of dropout layers in hidden layers) and then performed an evaluation of the adapted model on the test"
         f"Our hypothesis was validated as evaluation of the model "
         f"with the test set yielded a 99.2% accuracy, which met our clients goals. "
-        f"Therefore, in conclusion we were successful in the creation of a machine learning model to predict whether a "
+        f"Therefore, we were successful in the creation of a machine learning model to predict whether a "
         f" cherry leaf is infected with powdery mildew or not. Further details about the model can be found on the ML "
         f"performance page of this dashboard."
     )
