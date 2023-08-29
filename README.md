@@ -49,6 +49,29 @@ The dataset consisted of 2104 images of cherry leaves that were infected with po
 ### Data preparation 
 Non-image files from cherry leaves image dataset were removed and image files were split the images into train, validation and test in a 7:1:2 ratio.
 
+### Rationale to map the business requirements to the Data Visualizations and ML tasks
+
+Buisness requirement 1: **The client would like us to conduct a study to visually differentiate between a cherry plant infected with powdery mildew and one that is not.**
+
+Buisness requirement 1 maps to the following user story: As a client, I can see a study comparing the leaves infected with powdery mildew or not so I can see if there are any discriminatory features between the two groups
+
+We will tackle this user story by performing a study to determine whether we can visually differentiate a leaf infected with powdery mildew and one not infected with powdery mildew. This will allow us to determine whether the powdery  mildew can cause visual difference in the cherry leaves and also will give us a clue to whether the clients request of developing a tool to detect powdery mildew in cherry leaves can be solved by image analysis alone.
+
+Buisness requirement 2: **The client would like to detect whether a cherry leaf has powdery mildew or not.**
+
+Buisness requirement 2 maps to the following user stories:
+* As a client, I can make live predictions on cherry leaf images so I can accurately detect whether they have powdery mildew or not 
+* As a client, I can download a report so I can easily have a summary of the prediction probability result of each leaf so I can use this for the infection monitoring of my farm
+* As a client, I want to evaluate the model performance by seeing a summary of the performance of the model on test set data so I can determine whether the study has met my business requirements
+
+I will tackle these user stories by creating a binary classification model which can accurately detect whether a cherry leaf is infected with powdery mildew or not by detecting patterns in the leafs with powdery mildew that are distinct from those that are healthy. I will create dashboard where the client can view the model performance on test data. Additionally, I will ensure there is a functionality on the dashboard where the client can upload an image or multiple images of cherry leaves where they can 
+
+### ML buisness case
+
+Problem statement: Our client, who is a cherry farmer needs to monitor the infection of their crop of powdery mildew as this effects the quality and yield of the fruit. Currently, a farm employee spends around 30 minutes on each tree to determine whether a cherry tree is infected with powdery mildew. As this is a time-expensive approach, the client want a faster method to determine whether a tree is infected with powdery mildew
+Outcomes: Our outcomes are to develop a faster and more effective method for our client to detect powdery mildew in their crop.
+Approach: Intial data visualisation studies determined that although we could detect visual difference between leafs infected in powdery mildew or not, when we plotted the difference between the powdery mildew and healthy images, we could not see a large difference. Therefore, we decided to create a binary classification model to determine whether a leaf from a cherry tree is infected with powdery mildew or not. We used a dataset from Kaggle containing 2104 images of cherry leaves that were infected with powdery mildew and 2104 images of cherry leaves that were healthy to train our model. The model training and our hypothesese and validation will be describe below.
+
 ### Modeling
 
 #### Model building
@@ -112,9 +135,7 @@ Validation: To further address the issue of the model not being to generalise we
 
 ##### Hypothesis 4: Usage of the adam optimiser over adagrad optimiser improves model performance
 
-Validation: We initially explored the usage of different optimisers to determine what would lead to the best performance, while also reducing the change of overfitting. Usage of the adagrad optimiser results in a slow and steady increase in accuracy score but ultimately when the data was exposed to the test set, the accuracy dropped to 80%. We initially explored the `adagrad` optimiser to address concerns about model overfitting. However, following these findings we decided it would be best to explore different optimisers. The `adam` optimiser is popular as it utilises a combination of adaptive learning rates with momentum which can result in higher learning rates. However, increased learning rates in training does not necessarily mean that there is better model performance on test data. I initially found that without using regularisation techniques such as internal drop out layers and image augmentation, we still got reduced accuracy on the test set (89%). Therefore, we found usage of the regularisation techniques outlined above (dropout and image augmentation) to challenge the model, in addition to usage of the `adam` optimiser resulted in an increased accuracy score (99.2%) when evaluating the model performance on the test set.
-
-
+Validation: We initially explored the usage of different optimisers to determine what would lead to the best performance, while also reducing the change of overfitting. Usage of the adagrad optimiser results in a slow and steady increase in accuracy score but ultimately when the data was exposed to the test set, the accuracy dropped to 97%. We initially explored the `adagrad` optimiser to address concerns about model overfitting. However, following these findings we decided it would be best to explore different optimisers. The `adam` optimiser is popular as it utilises a combination of adaptive learning rates with momentum which can result in higher learning rates. However, increased learning rates in training does not necessarily mean that there is better model performance on test data. Therefore, we found usage of the regularisation techniques outlined above (dropout and image augmentation) to challenge the model, in addition to usage of the `adam` optimiser resulted in an increased accuracy score (99.2%) when evaluating the model performance on the test set.
 
 #### Model Evaluation and hypothesis validation summary
 
