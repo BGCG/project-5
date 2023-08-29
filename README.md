@@ -267,7 +267,7 @@ The manual testing of the app has been documented in the table below:
 ### PEP8 validation
 
 * I utilised the PEP8 validation tool pycodestyle by running `pycodestyle .` in the workspace terminal. Then I corrected any errors until all except for minor 'line too long errors' were resolved.
-* Additionally, I used the [PEP8 CI linted](https://pep8ci.herokuapp.com/) to validate the code in the Jupyter notebooks in this project.
+* Additionally, I used the [PEP8 CI linter](https://pep8ci.herokuapp.com/) to validate the code in the Jupyter notebooks in this project.
 
 ### Bugs
 
