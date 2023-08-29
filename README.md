@@ -21,7 +21,7 @@ The business requirements are:
 1. The client would like us to conduct a study to visually differentiate between a cherry plant infected with powdery mildew and one that is not.
 2. The client would like to be able to detect whether a cherry leaf is infected with powdery mildew or not.
 
-The business case can be broken down into the user stores discussed in this section. Note: User stores were seperated into MUST HAVE, SHOULD HAVE, COULD HAVE AND SHOULDN'T HAVE. All user stores labelled as SHOULD HAVE's were completed. Additionally, there were a number of users stores that were directed at the Machine learning (ML) scientists perpective, these along with the client-side user stories are available to view in the following [Github board](https://github.com/users/BGCG/projects/7/views/1)
+The business case can be broken down into the user stories discussed in this section. Note: User stories were separated into MUST HAVE, SHOULD HAVE, COULD HAVE AND SHOULDN'T HAVE. All user stories labelled as SHOULD HAVE were completed. Additionally, there were a number of users stores that were directed at the Machine learning (ML) scientists perspective, these along with the client-side user stories are available to view in the following [Github board](https://github.com/users/BGCG/projects/7/views/1)
 
 **Client user stories**
 
@@ -34,11 +34,11 @@ EPIC | Dashboard design and development
 There were a number of COULD HAVE and SHOULDN'T HAVE user stores that were not completed for the reasons outlined below:
 
 * As a client, I can share my prediction results easily so I can give access to the data to my other colleagues (SHOULDN'T HAVE).
-Reason for non-completion: This user story was not completed due to data privacy concerns, for example if the data could be accidentally share by anyone who had access to the link, this might break the NDA agreemment.
+Reason for non-completion: This user story was not completed due to data privacy concerns, for example if the data could be accidentally shared by anyone who had access to the link, this might break the NDA agreement.
 * As a client, I can provide feedback to the ML scientists via the dashboard so I can inform the model creators of any improvements that could be made to the ML tool (COULD HAVE) && As a client, I can view how the model generalises to data over time so I can monitor the model performance over a long period (COULD HAVE).
-Reason for non-completion: These users stories would be very effective for the monitoring stage of the models lifecycle as it woud provide an easy feedback contact portal to the ML scientist and provide a history of all the live predictions so the farmers could compare these results with crop outcomes (i.e. cherry fruit quality). These user stories were not completed as it was outside the scope of this educational project.
+Reason for non-completion: These users stories would be very effective for the monitoring stage of the CRISP-DM process as it would provide an easy feedback contact portal to the ML scientist and provide a history of all the live predictions so the farmers could compare these results with crop outcomes (i.e. cherry fruit quality). These user stories were not completed as it was outside the scope of this educational project.
 * As a client, I can report any technical issue with the dashboard so I can easily inform the developers of any bugs in the dashboard (COULD HAVE).
-Reason for non-completion: This user story was not completed due to time contraints but I believe would enhance the user experience and provide a effective way to monitor the dashboard.
+Reason for non-completion: This user story was not completed due to time constraints but I believe would enhance the user experience and provide an effective way to monitor the dashboard.
 
 ### Dataset composition 
 The dataset consisted of 2104 images of cherry leaves that were infected with powdery mildew and 2104 images of cherry leaves that were healthy. The dataset was downloaded from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
