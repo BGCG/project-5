@@ -51,35 +51,6 @@ Non-image files from cherry leaves image dataset were removed and image files we
 
 ### Modeling
 
-#### Hypothesis and validation
-
-###### Hypothesis 1: Cherry leaves infected with powdery mildew can be visually distinguished from those that are not infected
-
-Validation: As per the clients requests, we carried our study to see if a cherry leaf was infected with powdery mildew and those that are not, to determine whether there are any visual differences between the two groups. Plotting of an image montage showed that cherry leaves infected with powdery mildew showed that those affected with powdery mildew had white blemishes in the middle of the leaf and the leaf had a shriveled appearance.
-
-![image-montage-readme](https://res.cloudinary.com/delase5lw/image/upload/v1692531645/img-montage-readme_g8ebe7.jpg)
-
-Evaluation approach: Analysis of the average images and variability images in powdery mildew and unaffected leaves showed again that powdery mildews had more white stripes in the middle and inside the leaf body.
-
-![average-image-comparison-healthy](outputs/v1/avg_var_healthy.png)
-![average-image-comparison-infected](outputs/v1/avg_var_powdery_mildew.png)
-
-However, the difference between the average infected leaf and noninfected leaf showed no clear differences between the two groups. This confirmed that this problem can’t be solved with data analytics alone and that we require a more complex tool to allow us to distinguish between a leaf infected with powdery mildew and one that is not.
-
-![diff-between-averages-image](outputs/v1/avg_diff.png)
-
-###### Hypothesis 2: Providing a dropout layer in the hidden layer of the network improve prediction accuracy
-
-Validation: In our initial work, the network could make highly accurate predictions on the validation dataset (accuracy score on last epoch when evaluating validation set: 99.7%) when using the adam optimiser. However, when evaluating the test data, the accuracy score reduced to 87% - suggestive of overfitting of the model. Therefore, in order to make the job harder to learn from the train data to provide a more steady but accurate pace of learning, I decided to put in a dropout layer in the hidden layer to deactivate a randomly set of neurons to improve the network’s generalisation ability. This in combination with other regularisation techniques (such as image augmentation) resulted in an accuracy score of 99.2% when the model was evaluation on test data.
-
-###### Hypothesis 3: Adjusting the height and width shift range will improve model performance on test set
-
-Validation: To further address the issue of the model not being to generalise well enough on test data, I also decided to augment the images to make it more challenging for the model to find patterns while training to ultimately make the model more robust. This exposed the model to different scenarios and would improve its robustness in real world citation, i.e. say in future if the farmer had some images where part of the leaf was not present in the full image. If the model wasn’t prepared for images with reduced information, the model could make inaccurate predictions. I found setting the height and width shift range from 0.1 to 0.2 in the image augmentation parameters custom function and then apply these augmentation to the train set images contributed to an increase in model performance when performing the binary classification task as this could result in parts of the leaf in the image to be cut off and therefore making the data more challenging for the network to learn patterns from.
-
-##### Hypothesis 4: Usage of the adam optimiser over adagrad optimiser improves model performance
-
-Validation: We initially explored the usage of different optimisers to determine what would lead to the best performance, while also reducing the change of overfitting. Usage of the adagrad optimiser results in a slow and steady increase in accuracy score but ultimately when the data was exposed to the test set, the accuracy dropped to 80%. We initially explored the `adagrad` optimiser to address concerns about model overfitting. However, following these findings we decided it would be best to explore different optimisers. The `adam` optimiser is popular as it utilises a combination of adaptive learning rates with momentum which can result in higher learning rates. However, increased learning rates in training does not necessarily mean that there is better model performance on test data. I initially found that without using regularisation techniques such as internal drop out layers and image augmentation, we still got reduced accuracy on the test set (89%). Therefore, we found usage of the regularisation techniques outlined above (dropout and image augmentation) to challenge the model, in addition to usage of the `adam` optimiser resulted in an increased accuracy score (99.2%) when evaluating the model performance on the test set.
-
 #### Model building
 
 With the knowledge gained from our data visualisation study and our exploration of regularisation techniques and different hyperparameters, we constructed a high performance model for predicting whether a leaf is infected in powdery mildew or not. The model architecture is described below:
@@ -101,6 +72,49 @@ A dropout layer in the hidden layer to temporarily deactivate a number of random
 * `Sigmoid` activation in the output layer to introduce non-linearity to enable the network to model complex relations to make predictions.
 * `Adam` optimiser which utilises a combination of adaptive learning rates with momentum
 * `binary_crossentropy` quantifies the ability of the model’s predicted probability to match the binary labels.
+
+#### Model Evaluation and hypothesis validation summary
+
+Careful construction of the model with the help of regularisation techniques (internal dropout and image augmentation) and usage of the `adam` optimiser resulted in a model that predicted the correct labels with an accuracy of 99.2% while performing the test set evaluation.
+
+Evaluation of the model performance on the test set of data are shown below:
+
+![screenshot-evaluation-on-test-set](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/test-set-perform_gd71qg.jpg)
+
+In summary, the study showed that the model could make highly accurate predictions on test data (accuracy score of 99.2%), confirming we have met our business requirements for the client.
+
+#### Hypothesis and validation
+
+###### Hypothesis 1: Cherry leaves infected with powdery mildew can be visually distinguished from those that are not infected
+
+Validation: As per the clients requests, we carried our study to see if a cherry leaf was infected with powdery mildew and those that are not, to determine whether there are any visual differences between the two groups. Plotting of an image montage showed that cherry leaves infected with powdery mildew showed that those affected with powdery mildew had white blemishes in the middle of the leaf and the leaf had a shriveled appearance.
+
+![image-montage-readme](https://res.cloudinary.com/delase5lw/image/upload/v1692531645/img-montage-readme_g8ebe7.jpg)
+
+Evaluation approach: Analysis of the average images and variability images in powdery mildew and unaffected leaves showed again that powdery mildews had more white stripes in the middle and inside the leaf body.
+
+![average-image-comparison-healthy](outputs/v1/avg_var_healthy.png)
+![average-image-comparison-infected](outputs/v1/avg_var_powdery_mildew.png)
+
+However, the difference between the average infected leaf and noninfected leaf showed no clear differences between the two groups. This confirmed that this problem can’t be solved with data analytics alone and that we require a more complex tool to allow us to distinguish between a leaf infected with powdery mildew and one that is not.
+
+![diff-between-averages-image](outputs/v1/avg_diff.png)
+
+###### Hypothesis 2: Providing a dropout layer in the hidden layer of the network improve prediction accuracy
+
+In our initial work, we created a basic model as described in the 'basic model architecture' and 'key model features' but we did not have an internal dropout layers in it and later performed some hyperparameter optimisation (specifically with deciding which optimiser to use) as described in the remainder of this section. Our final model's performance was best when using a combination of regluarisation techniques and different hyperparameters, therefore we will present a table comparing the different models performance when using different parameters and regualarisation techniques at the end of the hypothesis and validation section.
+
+Validation: When evaluating the test data on the basic model, the accuracy score reduced to 98%. Although this performance was very good, we wanted to ensure that the model was robust when exposed to a variety of different image data. Therefore, in order to make the job harder to learn from the train data to provide a more steady but accurate pace of learning, I decided to put in a dropout layer in the hidden layer to deactivate a randomly set of neurons to improve the network’s generalisation ability. I trained the new adapted model on the train set and then evaluated it's performance on the test set. This in combination with other regularisation techniques (such as image augmentation) resulted in an accuracy score of 99.2% when the model was evaluation on test data.
+
+###### Hypothesis 3: Adjusting the height and width shift range will improve model performance on test set
+
+Validation: To further address the issue of the model not being to generalise well enough on test data, I also decided to augment the images to make it more challenging for the model to find patterns while training to ultimately make the model more robust. This exposed the model to different scenarios and would improve its robustness in real world citation, i.e. say in future if the farmer had some images where part of the leaf was not present in the full image. If the model wasn’t prepared for images with reduced information, the model could make inaccurate predictions. I found setting the height and width shift range from 0.1 to 0.2 in the image augmentation parameters custom function and then apply these augmentation to the train set images contributed to an increase in model performance when performing the binary classification task as this could result in parts of the leaf in the image to be cut off and therefore making the data more challenging for the network to learn patterns from.
+
+##### Hypothesis 4: Usage of the adam optimiser over adagrad optimiser improves model performance
+
+Validation: We initially explored the usage of different optimisers to determine what would lead to the best performance, while also reducing the change of overfitting. Usage of the adagrad optimiser results in a slow and steady increase in accuracy score but ultimately when the data was exposed to the test set, the accuracy dropped to 80%. We initially explored the `adagrad` optimiser to address concerns about model overfitting. However, following these findings we decided it would be best to explore different optimisers. The `adam` optimiser is popular as it utilises a combination of adaptive learning rates with momentum which can result in higher learning rates. However, increased learning rates in training does not necessarily mean that there is better model performance on test data. I initially found that without using regularisation techniques such as internal drop out layers and image augmentation, we still got reduced accuracy on the test set (89%). Therefore, we found usage of the regularisation techniques outlined above (dropout and image augmentation) to challenge the model, in addition to usage of the `adam` optimiser resulted in an increased accuracy score (99.2%) when evaluating the model performance on the test set.
+
+
 
 #### Model Evaluation and hypothesis validation summary
 
