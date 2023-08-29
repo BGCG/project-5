@@ -49,7 +49,7 @@ def page_ml_performance_metrics():
     roc_plot = plt.imread(f"outputs/{version}/roc_plot.png")
     st.image(roc_plot, caption="ROC plot")
     st.success("The ROC plot is a plot to evaluate the models ability to accurately distinguish between classes by plotting the false positive"
-               "rate by the true positive rate. Plotting the false positive rate by the true positive rate suggested the model is very good at "
+               " rate by the true positive rate. Plotting the false positive rate by the true positive rate suggested the model is very good at "
                "predicting the positive class, as the false positive rate was consistently near 0 and the true positive rate consistently close to 1."
                " The AUC, which is used to summarise the overall performance, was 1.0 suggestive that the model is good a distinguishing between classes.")
 
