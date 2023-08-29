@@ -13,6 +13,8 @@ We have developed a machine learning tool to predict whether a cherry leaf is in
 
 We followed the Cross-industry Standard process for Data-Mining (CRISP-DM) structure frameworks to guide our steps involved in this machine learning project.
 
+![screenshot-dashboard](https://res.cloudinary.com/delase5lw/image/upload/v1693315653/amiresponsive_screenshot_k2eqm4.jpg)
+
 ### Business case / understanding
 
 Our client is a cherry farmer who has been having issues with their cherry crops being infected with the fungus, Powdery Mildew. Their farm employees spend approximately 30 minutes per cherry tree checking if the leaves show signs of infection. As this is a strain on the time resources of the employees and infection of the cherry tree with powdery mildew can impact the quality and yield of the product, the client would like to explore more time-effective methods to determine whether cherry leaves are infected with powdery mildew or not.
