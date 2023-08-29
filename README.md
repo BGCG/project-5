@@ -21,11 +21,24 @@ The business requirements are:
 1. The client would like us to conduct a study to visually differentiate between a cherry plant infected with powdery mildew and one that is not.
 2. The client would like to be able to detect whether a cherry leaf is infected with powdery mildew or not.
 
-The business case can be broken down into the following user stories:
-* As a client, I would like to see a study comparing the leaves infected with powdery mildew or not so I can see if there are any discriminatory features between the two groups.
-* As a client, I would like to be able to evaluation the model performance by seeing a summary of the performance of the model on test set data so I can determine whether the study has met my business requirements
-* As a client, I would like a tool to allow me to make live predictions on cherry leaf images so I can accurately detect whether they have powdery mildew or not
-* As a client, I would like to be able to download a report so I can easily have a summary of the prediction probability result of each leaf so I can use this for the infection monitoring of my farm.
+The business case can be broken down into the user stores discussed in this section. Note: User stores were seperated into MUST HAVE, SHOULD HAVE, COULD HAVE AND SHOULDN'T HAVE. All user stores labelled as SHOULD HAVE's were completed. Additionally, there were a number of users stores that were directed at the Machine learning (ML) scientists perpective, these along with the client-side user stories are available to view in the following [Github board](https://github.com/users/BGCG/projects/7/views/1)
+
+**Client user stories**
+
+EPIC | Dashboard design and development
+* As a client, I can see a study comparing the leaves infected with powdery mildew or not so I can see if there are any discriminatory features between the two groups (SHOULD HAVE)
+* As a client, I can make live predictions on cherry leaf images so I can accurately detect whether they have powdery mildew or not (SHOULD HAVE)
+* As a client, I can download a report so I can easily have a summary of the prediction probability result of each leaf so I can use this for the infection monitoring of my farm (SHOULD HAVE)
+* As a client, I want to evaluate the model performance by seeing a summary of the performance of the model on test set data so I can determine whether the study has met my business requirements (SHOULD HAVE)
+
+There were a number of COULD HAVE and SHOULDN'T HAVE user stores that were not completed for the reasons outlined below:
+
+* As a client, I can share my prediction results easily so I can give access to the data to my other colleagues (SHOULDN'T HAVE).
+Reason for non-completion: This user story was not completed due to data privacy concerns, for example if the data could be accidentally share by anyone who had access to the link, this might break the NDA agreemment.
+* As a client, I can provide feedback to the ML scientists via the dashboard so I can inform the model creators of any improvements that could be made to the ML tool (COULD HAVE) && As a client, I can view how the model generalises to data over time so I can monitor the model performance over a long period (COULD HAVE). 
+Reason for non-completion: These users stories would be very effective for the monitoring stage of the models lifecycle as it woud provide an easy feedback contact portal to the ML scientist and provide a history of all the live predictions so the farmers could compare these results with crop outcomes (i.e. cherry fruit quality). These user stories were not completed as it was outside the scope of this educational project.
+* As a client, I can report any technical issue with the dashboard so I can easily inform the developers of any bugs in the dashboard (COULD HAVE). 
+Reason for non-completion: This user story was not completed due to time contraints but I believe would enhance the user experience and provide a effective way to monitor the dashboard.
 
 ### Dataset composition 
 The dataset consisted of 2104 images of cherry leaves that were infected with powdery mildew and 2104 images of cherry leaves that were healthy. The dataset was downloaded from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
@@ -43,7 +56,7 @@ Validation: As per the clients requests, we carried our study to see if a cherry
 
 ![image-montage-readme](https://res.cloudinary.com/delase5lw/image/upload/v1692531645/img-montage-readme_g8ebe7.jpg)
 
-Analysis of the average images and variability images in powdery mildew and unaffected leaves showed again that powdery mildews had more white stripes in the middle and inside the leaf body.
+Evaluation approach: Analysis of the average images and variability images in powdery mildew and unaffected leaves showed again that powdery mildews had more white stripes in the middle and inside the leaf body.
 
 ![average-image-comparison-healthy](outputs/v1/avg_var_healthy.png)
 ![average-image-comparison-infected](outputs/v1/avg_var_powdery_mildew.png)
