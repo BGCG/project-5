@@ -236,6 +236,7 @@ If the 'As a client, I can provide feedback to the ML scientists via the dashboa
 * Jupyter notebook for the development of the pipeline
 * Kaggle as the data sourcing platform for this project
 * Cloudinary to host the images displayed in this README.
+* [amiresponsive](https://ui.dev/amiresponsive) to create the screenshot of the dashboard for the introduction to this README.
 
 #### Languages
 
@@ -265,7 +266,8 @@ The manual testing of the app has been documented in the table below:
 
 ### PEP8 validation
 
-I utilised the PEP8 validation tool pycodestyle by running `pycodestyle .` in the workspace terminal. Then I corrected any errors until all except for minor 'line too long errors' were resolved.
+* I utilised the PEP8 validation tool pycodestyle by running `pycodestyle .` in the workspace terminal. Then I corrected any errors until all except for minor 'line too long errors' were resolved.
+* Additionally, I used the [PEP8 CI linted](https://pep8ci.herokuapp.com/) to validate the code in the Jupyter notebooks in this project.
 
 ### Bugs
 
