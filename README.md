@@ -35,9 +35,9 @@ There were a number of COULD HAVE and SHOULDN'T HAVE user stores that were not c
 
 * As a client, I can share my prediction results easily so I can give access to the data to my other colleagues (SHOULDN'T HAVE).
 Reason for non-completion: This user story was not completed due to data privacy concerns, for example if the data could be accidentally share by anyone who had access to the link, this might break the NDA agreemment.
-* As a client, I can provide feedback to the ML scientists via the dashboard so I can inform the model creators of any improvements that could be made to the ML tool (COULD HAVE) && As a client, I can view how the model generalises to data over time so I can monitor the model performance over a long period (COULD HAVE). 
+* As a client, I can provide feedback to the ML scientists via the dashboard so I can inform the model creators of any improvements that could be made to the ML tool (COULD HAVE) && As a client, I can view how the model generalises to data over time so I can monitor the model performance over a long period (COULD HAVE).
 Reason for non-completion: These users stories would be very effective for the monitoring stage of the models lifecycle as it woud provide an easy feedback contact portal to the ML scientist and provide a history of all the live predictions so the farmers could compare these results with crop outcomes (i.e. cherry fruit quality). These user stories were not completed as it was outside the scope of this educational project.
-* As a client, I can report any technical issue with the dashboard so I can easily inform the developers of any bugs in the dashboard (COULD HAVE). 
+* As a client, I can report any technical issue with the dashboard so I can easily inform the developers of any bugs in the dashboard (COULD HAVE).
 Reason for non-completion: This user story was not completed due to time contraints but I believe would enhance the user experience and provide a effective way to monitor the dashboard.
 
 ### Dataset composition 
@@ -130,6 +130,7 @@ In summary, the study showed that the model could make highly accurate predictio
 ![screenshot-diff-between-avg-images](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/leaf-visualiser-diff-avg-imgs_lj4axt.jpg)
 * When 'healthy' or 'powdery mildew' is selected and 'create montage' is clicked, then an image montage of the healthy or powdery mildew is created and displayed, allowing the client to view a subset of the images in either group.
 ![screenshot-montage](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/leaf-visualiser-montage_x1oayv.jpg)
+* The features described on this page tackles the 'As a client, I can see a study comparing the leaves infected with powdery mildew or not so I can see if there are any discriminatory features between the two groups' user story.
 
 #### Project hypothesis page
 
@@ -156,6 +157,8 @@ Then a confusion matrix which shows all the true positives, true negatives, fals
 
 ![screenshot-test-set-performance-table](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/test-set-perform_gd71qg.jpg)
 
+* The 'ML performance' page tackles the 'As a client, I want to evaluate the model performance by seeing a summary of the performance of the model on test set data so I can determine whether the study has met my business requirements' user story.
+
 #### Live powdery mildew predictor
 
 * When the user clicks on the ‘Live powdery mildew predictor’ option on the navigation menu, a page inviting the user to upload an image is displayed.
@@ -171,10 +174,13 @@ Then a confusion matrix which shows all the true positives, true negatives, fals
 ![screehshot-result-live-prediction](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/live-predictor-upload-results_feqrr9.jpg)
 
 * The user can upload multiple images, to perform predictions on several images and if the user downloads the report, the user will display a new row of a predicted label for the different images.
+* The feature presented on the 'Live powdery mildew predictor page' tackles the 'As a client, I can make live predictions on cherry leaf images so I can accurately detect whether they have powdery mildew or not' and the 'As a client, I can download a report so I can easily have a summary of the prediction probability result of each leaf so I can use this for the infection monitoring of my farm' user stories.
 
 ### Monitoring
 
 Since this project was created for the purpose of the project 5 submission to the Code institute diploma in full stack software development course, monitoring of this app is out of the scope of the purpose of this project. However, in a real world scenario I would monitor the app to ensure it was making accurate predictions and welcome any feedback from the client. If an excess of inaccurate predictions were detected, I would go back and create a new model from the model described in this study where I found fine tune the parameters to ensure we could detect accurately whether a leaf was infected or not, and thereby ensure the client’s business requirements were being met and ultimately improving the clients relations and satisfaction.
+
+If the 'As a client, I can provide feedback to the ML scientists via the dashboard so I can inform the model creators of any improvements that could be made to the ML tool (COULD HAVE) && As a client, I can view how the model generalises to data over time so I can monitor the model performance over a long period (COULD HAVE)' user stories were completed, this could implement features that would be effective in monitoring the performance of the model throughout time.
 
 ### Technologies used
 
