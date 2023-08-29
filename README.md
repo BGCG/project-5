@@ -5,23 +5,23 @@
 Powdery mildew is a fungal infection that affects a wide range of plants, including the cherry plant. Infection with powdery mildew can cause a white or grayish coating on the leaves of infected plants and sometimes the fruit. The fungus spreads through airborne spores and thrives in humid conditions.
 Infection of plants with powdery mildew can negatively affect the overall functioning of the plant, including disrupting photosynthesis. This can result in stunting of growth of the plant as well as overall quality and yield of the fruit.
 
-Powdery mildew can spread easily between infected plants via physical contact with infected plants or fungal airborne spores. Therefore, early detection of powdery mildew infection is vital to preserve the overall quality of the crop.
+Powdery mildew can spread easily between plants via physical contact with infected plants or fungal airborne spores. Therefore, early detection of powdery mildew infection is vital to preserve the overall quality of the crop.
 
-Our client, a cherry farmer, is interested in creating a tool to accurately detect whether a cherry leaf is infected with powdery mildew or not in order to allow effective infection monitoring of their crops.
+The client, a cherry farmer, is interested in creating a tool to accurately detect whether a cherry leaf is infected with powdery mildew or not in order to allow effective infection monitoring of their crops.
 
-We have developed a machine learning tool to predict whether a cherry leaf is infected with powdery mildew or not. The tool has been deployed and can be accessed by following this [link](https://powdery-mildew-predictor-1becb7613bb9.herokuapp.com/).
+To do this, I have developed a machine learning tool that predicts whether a cherry leaf is infected with powdery mildew or not. The tool has been deployed and can be accessed by following this [link](https://powdery-mildew-predictor-1becb7613bb9.herokuapp.com/).
 
-We followed the Cross-industry Standard process for Data-Mining (CRISP-DM) structure frameworks to guide our steps involved in this machine learning project.
+The Cross-industry Standard process for Data-Mining (CRISP-DM) structure frameworks was followed to guide the steps involved in this machine learning project.
 
 ![screenshot-dashboard](https://res.cloudinary.com/delase5lw/image/upload/v1693315653/amiresponsive_screenshot_k2eqm4.jpg)
 
 ### Business case / understanding
 
-Our client is a cherry farmer who has been having issues with their cherry crops being infected with the fungus, Powdery Mildew. Their farm employees spend approximately 30 minutes per cherry tree checking if the leaves show signs of infection. As this is a strain on the time resources of the employees and infection of the cherry tree with powdery mildew can impact the quality and yield of the product, the client would like to explore more time-effective methods to determine whether cherry leaves are infected with powdery mildew or not.
+The client is a cherry farmer who has been having issues with their cherry crops being infected with the fungus, Powdery Mildew. Their farm employees spend approximately 30 minutes per cherry tree checking if the leaves show signs of infection. As this is a strain on the time resources of the employees and infection of the cherry tree with powdery mildew can impact the quality and yield of the product, the client would like to explore more time-effective methods to determine whether cherry leaves are infected with powdery mildew or not.
 
 The business requirements are:
 
-1. The client would like us to conduct a study to visually differentiate between a cherry plant infected with powdery mildew and one that is not.
+1. The client would like a study conducted to visually differentiate between a cherry plant infected with powdery mildew and one that is not.
 2. The client would like to be able to detect whether a cherry leaf is infected with powdery mildew or not.
 
 The business case can be broken down into the user stories discussed in this section. Note: User stories were separated into MUST HAVE, SHOULD HAVE, COULD HAVE AND SHOULDN'T HAVE. All user stories labelled as SHOULD HAVE were completed. Additionally, there were a number of users stores that were directed at the Machine learning (ML) scientists perspective, these along with the client-side user stories are available to view in the following [Github board](https://github.com/users/BGCG/projects/7/views/1)
@@ -37,7 +37,7 @@ There were a number of COULD HAVE and SHOULDN'T HAVE user stores that were not c
 
 * As a client, I can share my prediction results easily so I can give access to the data to my other colleagues (SHOULDN'T HAVE).
 
-Reason for non-completion: This user story was not completed due to data privacy concerns, for example if the data could be accidentally shared by anyone who had access to the link, this might break the NDA agreement.
+Reason for non-completion: This user story was not completed due to data privacy concerns, for example if the data is accidentally shared by anyone who had access to the link, this might break the NDA agreement.
 
 * As a client, I can provide feedback to the ML scientists via the dashboard so I can inform the model creators of any improvements that could be made to the ML tool (COULD HAVE) and As a client, I can view how the model generalises to data over time so I can monitor the model performance over a long period (COULD HAVE).
 
@@ -57,11 +57,11 @@ Non-image files from cherry leaves image dataset were removed and image files we
 
 ### Rationale to map the business requirements to the Data Visualizations and ML tasks
 
-Business requirement 1: **The client would like us to conduct a study to visually differentiate between a cherry plant infected with powdery mildew and one that is not.**
+Business requirement 1: **The client would like a study conducted to visually differentiate between a cherry plant infected with powdery mildew and one that is not.**
 
 Business requirement 1 maps to the following user story: As a client, I can see a study comparing the leaves infected with powdery mildew or not so I can see if there are any discriminatory features between the two groups
 
-I will tackle this user story by performing a study to determine whether we can visually differentiate a leaf infected with powdery mildew and one not infected with powdery mildew. This will allow us to determine whether the powdery  mildew can cause visual difference in the cherry leaves and also will give us a clue to whether the client's request of developing a tool to detect powdery mildew in cherry leaves can be solved by image analysis alone.
+I will tackle this user story by performing a study to determine whether we can visually differentiate a leaf infected with powdery mildew and one not infected with powdery mildew. This will determine whether the powdery  mildew can cause visual difference in the cherry leaves and also will indicate whether the client's request of developing a tool to detect powdery mildew in cherry leaves can be solved by image analysis alone.
 
 Business requirement 2: **The client would like to detect whether a cherry leaf has powdery mildew or not.**
 
@@ -69,23 +69,23 @@ Business requirement 2 maps to the following user stories:
 
 * As a client, I can make live predictions on cherry leaf images so I can accurately detect whether they have powdery mildew or not
 * As a client, I can download a report so I can easily have a summary of the prediction probability result of each leaf so I can use this for the infection monitoring of my farm
-* As a client, I want to evaluate the model performance by seeing a summary of the performance of the model on test set data so I can determine whether the study has met my business requirements
+* As a client, I can evaluate the model performance by seeing a summary of the performance of the model on test set data so I can determine whether the study has met my business requirements
 
 I will tackle these user stories by creating a binary classification model which can accurately detect whether a cherry leaf is infected with powdery mildew or not by detecting patterns in the leaves with powdery mildew that are distinct from those that are healthy. I will create a dashboard where the client can view the model performance on test data. Additionally, I will ensure there is a functionality on the dashboard where the client can upload an image or multiple images of cherry leaves allowing them to predict whether the leaves have powdery mildew or not.
 
 ### ML business case
 
-**Problem statement:** Our client, who is a cherry farmer, needs to monitor the infection of their crop of powdery mildew as this affects the quality and yield of the fruit. Currently, a farm employee spends around 30 minutes on each tree to determine whether a cherry tree is infected with powdery mildew. As this is a time-expensive approach, the client wants a faster method to determine whether a tree is infected with powdery mildew.
+**Problem statement:** The client, who is a cherry farmer, needs to monitor the infection of powdery mildew within their crop as this affects the quality and yield of the fruit. Currently, a farm employee spends around 30 minutes on each tree to determine whether a cherry tree is infected with powdery mildew. As this is a time-expensive approach, the client wants a faster method to determine whether a tree is infected with powdery mildew.
 
 **Outcomes:** Our outcomes are to develop a faster and more effective method for our client to detect powdery mildew in their crop.
 
-**Approach:** Initial data visualisation studies determined that although we could detect visual difference between leaves infected in powdery mildew or not, when we plotted the difference between the powdery mildew and healthy images, we could not see a large difference. Therefore, we decided to create a binary classification model to determine whether a leaf from a cherry tree is infected with powdery mildew or not. We used a dataset from Kaggle containing 2104 images of cherry leaves that were infected with powdery mildew and 2104 images of cherry leaves that were healthy to train our model. The model training and our hypotheses and validation will be described below.
+**Approach:** Initial data visualisation studies determined that although I could detect visual difference between healthy leaves and those infected with powdery mildew, when I plotted the difference between the powdery mildew and healthy images, I could not see a large difference. Therefore, I decided to create a binary classification model to determine whether a leaf from a cherry tree is infected with powdery mildew or not. I used a dataset from Kaggle containing 2104 images of cherry leaves that were infected with powdery mildew and 2104 images of cherry leaves that were healthy to train our model. The model training, hypotheses and validation will be described below.
 
 ### Modeling
 
 #### Model building
 
-With the knowledge gained from our data visualisation study and our exploration of regularisation techniques and different hyperparameters, we constructed a high performance model for predicting whether a leaf is infected in powdery mildew or not. The model architecture is described below:
+With the knowledge gained from the data visualisation study and exploration of regularisation techniques and different hyperparameters, I constructed a high performance model for predicting whether a leaf is infected in powdery mildew or not. The model architecture is described below:
 
 ##### Model basic architecture
 
@@ -118,13 +118,13 @@ Evaluation of the model performance on the test set of data are shown below:
 
 ![screenshot-evaluation-on-test-set](https://res.cloudinary.com/delase5lw/image/upload/v1692530012/test-set-perform_gd71qg.jpg)
 
-In summary, the study showed that the model could make highly accurate predictions on test data (accuracy score of 99.2%), confirming we have met our business requirements for the client. I will describe the process of optimising the model below.
+In summary, the study showed that the model could make highly accurate predictions on test data (accuracy score of 99.2%), confirming this meets the business requirements of the client. I will describe the process of optimising the model below.
 
 #### Hypothesis and validation
 
 ###### Hypothesis 1: Cherry leaves infected with powdery mildew can be visually distinguished from those that are not infected
 
-Validation and conclusions: As per the clients requests, we carried our study to see if a cherry leaf was infected with powdery mildew and those that are not, to determine whether there are any visual differences between the two groups. Plotting of an image montage showed that cherry leaves infected with powdery mildew showed that those affected with powdery mildew had white blemishes in the middle of the leaf and the leaf had a shriveled appearance.
+Validation and conclusions: As per the clients requests, I carried our study to see if a cherry leaf was infected with powdery mildew and those that are not, to determine whether there are any visual differences between the two groups. Plotting of an image montage showed that cherry leaves infected with powdery mildew had white blemishes in the middle of the leaf and the leaf had a shriveled appearance.
 
 ![image-montage-readme](https://res.cloudinary.com/delase5lw/image/upload/v1692531645/img-montage-readme_g8ebe7.jpg)
 
@@ -133,25 +133,25 @@ Analysis of the average images and variability images in powdery mildew and unaf
 ![average-image-comparison-healthy](outputs/v1/avg_var_healthy.png)
 ![average-image-comparison-infected](outputs/v1/avg_var_powdery_mildew.png)
 
-However, the difference between the average infected leaf and noninfected leaf showed no clear differences between the two groups. This confirmed that this problem can’t be solved with data analytics alone and that we require a more complex tool to allow us to distinguish between a leaf infected with powdery mildew and one that is not.
+However, the difference between the average infected leaf and noninfected leaf showed no clear differences between the two groups. This confirmed that this problem can’t be solved with data analytics alone and that a more complex tool is required to allow us to distinguish between a leaf infected with powdery mildew and one that is not.
 
 ![diff-between-averages-image](outputs/v1/avg_diff.png)
 
 ###### Hypothesis 2: Providing a dropout layer in the hidden layer of the network improve prediction accuracy
 
-In our initial work, we created a basic model as described in the 'Model Basic Architecture' and 'Model Key Features' except for initially we did not have an internal dropout layers in it and later performed some hyperparameter optimisation (specifically with deciding which optimiser to use) as described in the remainder of this section. Our final model's performance was best when using a combination of regluarisation techniques and different hyperparameters, therefore we will present a table comparing the different models performance when using different parameters and regularisation techniques at the end of the hypothesis and validation section.
+I initially created a basic model as described in the 'Model Basic Architecture' and 'Model Key Features' sections above. As noted previously, to ensure the model was robust, I expanded on the basic model by including internal dropout layers and performing hyperparameter optimisation (specifically with deciding which optimiser to use). These additional steps are described in the remainder of this section. The final model's performance was best when using a combination of regluarisation techniques and different hyperparameters, therefore I will present a table comparing the different models performance when using different parameters and regularisation techniques at the end of the hypothesis and validation section.
 
-Validation and conclusions: When evaluating the test data on the basic model, the accuracy score reduced to 98%. Although this performance was very good, we wanted to ensure that the model was robust when exposed to a variety of different image data. Therefore, in order to make the job harder to learn from the train data to provide a more steady but accurate pace of learning, I decided to put in a dropout layer in the hidden layer to deactivate a randomly set of neurons to improve the network’s generalisation ability. I trained the new adapted model on the train set and then evaluated its performance on the test set. This in combination with other regularisation techniques (such as image augmentation) resulted in an accuracy score of 99.2% when the model was evaluated on test data.
+Validation and conclusions: When evaluating the test data on the basic model, the accuracy score reduced to 98%. Although this performance was very good, I wanted to ensure that the model was robust when exposed to a variety of different image data. Therefore, in order to make the job harder to learn from the train data, to provide a more steady but accurate pace of learning, I decided to put in a dropout layer in the hidden layer to deactivate a random set of neurons to improve the network’s generalisation ability. I trained the new adapted model on the train set and then evaluated its performance on the test set. This in combination with other regularisation techniques (such as image augmentation) resulted in an accuracy score of 99.2% when the model was evaluated on test data.
 
 ###### Hypothesis 3: Adjusting the height and width shift range will improve model performance on test set
 
-Validation and conclusions: To further address the issue of the model not being to generalise well enough on test data, I also decided to augment the images to make it more challenging for the model to find patterns while training to ultimately make the model more robust. This exposed the model to different scenarios and would improve its robustness in real world citation, i.e. say in future if the farmer had some images where part of the leaf was not present in the full image. If the model wasn’t prepared for images with reduced information, the model could make inaccurate predictions. I achieved this by setting setting the height and width shift range from 0.1 to 0.2 in the image augmentation parameters custom function and then apply these augmentation to the train set images contributed to an increase in model performance when performing the binary classification task as this could result in parts of the leaf in the image to be cut off and therefore making the data more challenging for the network to learn patterns from.
+Validation and conclusions: To further address the issue of the model not being able to generalise well enough on test data, I also decided to augment the images to make it more challenging for the model to find patterns while training and to ultimately make the model more robust. This exposed the model to different scenarios and would improve its robustness in real world citation, i.e. if in the future the farmer had some images where part of the leaf was not present in the full image. If the model wasn’t prepared for images with reduced information, the model could make inaccurate predictions. I achieved this by setting the height and width shift range from 0.1 to 0.2 in the image augmentation parameters custom function and then applying this augmentation to the train set images which contributed to an increase in model performance when performing the binary classification task.
 
 ##### Hypothesis 4: Usage of the adam optimiser over adagrad optimiser improves model performance
 
-Validation and conclusions: We initially explored the usage of different optimisers to determine what would lead to the best performance, while also reducing the change of overfitting. We initially explored the `adagrad` optimiser to address concerns about model overfitting as we noticed that the validation accuracy was consistently performing better than the train accuracy at each Epoch.  Usage of the `adagrad` optimiser results in a slow and steady increase in accuracy score but ultimately when the data was exposed to the test set, the accuracy dropped to 97%. However, following these findings we decided it would be best to explore different optimisers. The `adam` optimiser is popular as it utilises a combination of adaptive learning rates with momentum which can result in higher learning rates. However, increased learning rates in training does not necessarily mean that there is better model performance on test data. Therefore, we found usage of the regularisation techniques outlined above (dropout and image augmentation) to challenge the model, in addition to usage of the `adam` optimiser resulted in an increased accuracy score (99.2%) when evaluating the model performance on the test set.
+Validation and conclusions: I initially explored the usage of different optimisers to determine what would lead to the best performance, while also reducing the change of overfitting. I initially explored the `adagrad` optimiser to address concerns about model overfitting after noting that the validation accuracy was consistently performing better than the train accuracy at each Epoch.  Usage of the `adagrad` optimiser results in a slow and steady increase in accuracy score but ultimately when the data was exposed to the test set, the accuracy dropped to 97%. However, following these findings I decided it would be best to explore different optimisers. The `adam` optimiser is popular as it utilises a combination of adaptive learning rates with momentum which can result in higher learning rates. However, increased learning rates in training does not necessarily mean that there is better model performance on test data. The usage of the regularisation techniques outlined above (dropout and image augmentation) to challenge the model, in addition to usage of the `adam` optimiser resulted in an increased accuracy score (99.2%) when evaluating the model performance on the test set.
 
-In summary, the study showed that the model could make highly accurate predictions on test data (accuracy score of 99.2%), confirming we have met our business requirements for the client.
+In summary, the study showed that the model could make highly accurate predictions on test data (accuracy score of 99.2%), confirming I have met the business requirements for the client.
 
 ### Deployment phase - dashboard implementation and features
 
@@ -273,7 +273,7 @@ The manual testing of the app has been documented in the table below:
 
 All known bugs have been fixed to the best of my knowledge. However, the troubleshooting and resolution of a number of bugs identified in development are described below:
 
-* I encountered the error `AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'` When trying to use the resampling filter ANTIALIAS` to reducing aliasing artifacts when resizing the input image on the live_predictor page. Search on [stack overflow](https://stackoverflow.com/questions/76616042/attributeerror-module-pil-image-has-no-attribute-antialias) found this was due to me initially using Pillow version 10, where this attribute was not available. Changing the Pillow version to 9.5.0 resolved this issue.
+* I encountered the error `AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'` When trying to use the resampling filter ANTIALIAS` to reduce aliasing artifacts when resizing the input image on the live_predictor page. Search on [stack overflow](https://stackoverflow.com/questions/76616042/attributeerror-module-pil-image-has-no-attribute-antialias) found this was due to me initially using Pillow version 10, where this attribute was not available. Changing the Pillow version to 9.5.0 resolved this issue.
 * Additionally, when creating the functionality to ensure that multiple predictions can be contained within one report download on the live_predictor page, I initially tried to append each new result to a list (ie when the user uploads multiple images and then a prediction is run on them), I got the error `Error "'DataFrame' object has no attribute 'append'"`. Searching on [stack overflow](https://stackoverflow.com/questions/75956209/error-dataframe-object-has-no-attribute-append) found that as of pandas 2.0 `append` was depreciated. Instead as suggested in the stack, I used the `.loc` accessor to allow a new row to be added to the pandas dataframe so that a new row can be added to the report with every additional image uploaded and passed through the predictor tool.
 * A simple bug was noticed when I was deploying the app, that when the app was trying to access the plots, images required to build the montage and when trying to perform live predictions on unseen images, I was getting an error that it could not access the resources required to perform these actions. This is because I referenced the inputs/ and outputs/ in the slugignore file and therefore they could not be accessed by the app. Therefore, I removed outputs from the slugignore files, while also just referencing the test and train datasets in the slugignore file.
 
