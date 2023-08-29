@@ -64,6 +64,7 @@ def page_ml_performance_metrics():
     st.write("### Performance on Test Set")
     st.dataframe(pd.DataFrame(load_test_evaluation(
         version), index=['Loss', 'Accuracy']))
+    st.success("The model evaluation on the test set showed that we have met our clients expectations - where we have achieved an accuracy score of 99.2%")
 
     st.write(
         f"For additional information, please read this projects readme file\n"

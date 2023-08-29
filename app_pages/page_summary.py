@@ -31,7 +31,7 @@ def page_summary():
     st.success(
         f"The project has 2 buisness requirements:\n"
         f"* 1 - The client would is interested to have a study to visually differentiate a cherry leaf infected with powdery mildew or not.\n"
-        f"* 2 - An machine learning model to predict whether a partiuclar leaf is infected by powdery mildew or not.\n"
+        f"* 2 - The client would like to be able to detect whether a cherry leaf is infected with powdery mildew or not.\n"
     )
 
     st.write(
