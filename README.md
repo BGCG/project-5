@@ -68,9 +68,11 @@ I will tackle these user stories by creating a binary classification model which
 
 ### ML buisness case
 
-Problem statement: Our client, who is a cherry farmer needs to monitor the infection of their crop of powdery mildew as this effects the quality and yield of the fruit. Currently, a farm employee spends around 30 minutes on each tree to determine whether a cherry tree is infected with powdery mildew. As this is a time-expensive approach, the client want a faster method to determine whether a tree is infected with powdery mildew
-Outcomes: Our outcomes are to develop a faster and more effective method for our client to detect powdery mildew in their crop.
-Approach: Intial data visualisation studies determined that although we could detect visual difference between leafs infected in powdery mildew or not, when we plotted the difference between the powdery mildew and healthy images, we could not see a large difference. Therefore, we decided to create a binary classification model to determine whether a leaf from a cherry tree is infected with powdery mildew or not. We used a dataset from Kaggle containing 2104 images of cherry leaves that were infected with powdery mildew and 2104 images of cherry leaves that were healthy to train our model. The model training and our hypothesese and validation will be describe below.
+**Problem statement:** Our client, who is a cherry farmer needs to monitor the infection of their crop of powdery mildew as this effects the quality and yield of the fruit. Currently, a farm employee spends around 30 minutes on each tree to determine whether a cherry tree is infected with powdery mildew. As this is a time-expensive approach, the client want a faster method to determine whether a tree is infected with powdery mildew.
+
+**Outcomes:** Our outcomes are to develop a faster and more effective method for our client to detect powdery mildew in their crop.
+
+**Approach:** Intial data visualisation studies determined that although we could detect visual difference between leafs infected in powdery mildew or not, when we plotted the difference between the powdery mildew and healthy images, we could not see a large difference. Therefore, we decided to create a binary classification model to determine whether a leaf from a cherry tree is infected with powdery mildew or not. We used a dataset from Kaggle containing 2104 images of cherry leaves that were infected with powdery mildew and 2104 images of cherry leaves that were healthy to train our model. The model training and our hypothesese and validation will be describe below.
 
 ### Modeling
 
