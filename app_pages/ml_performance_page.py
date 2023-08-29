@@ -9,7 +9,7 @@ def page_ml_performance_metrics():
     """
     Render text going through the machine learning performance
     Render the plots describing the machine learning performance
-    Load the evaluation pickle so user can see test set evaludaiton accuracy and loss scores
+    Load the evaluation pickle so user can see test set evaluation accuracy and loss scores
     """
 
     version = 'v1'
@@ -19,7 +19,7 @@ def page_ml_performance_metrics():
     labels_distribution = plt.imread(
         f"outputs/{version}/labels_distribution.png")
     st.image(labels_distribution,
-             caption='Labels distrubution on Train, Valdation and Test sets')
+             caption='Labels distribution on Train, Validation and Test sets')
     st.success("Plotting the number of Healthy and Powdery mildew images in train, test and validation sets "
                "showed that the dataset is balanced - with healthy and powdery mildew groups having identical "
                "sample numbers in test, validation and train sets.")
@@ -35,7 +35,7 @@ def page_ml_performance_metrics():
     model_loss = plt.imread(f"outputs/{version}/model_training_loss.png")
     st.image(model_loss, caption="Model Training losses")
     st.success("Plotting of loss during each successive iteration during model training showed that loss decreased over while training, "
-               "suggestive that the model is adjusting it parameters to fit the training data and is improving it's ability to detect "
+               "suggestive that the model is adjusting it parameters to fit the training data and is improving its ability to detect "
                "patterns in the train data and reduce errors. Additionally, the validation loss also decreasing in a similar "
                "fashion to that seen in the training data suggestive that the model is generalising well to unseen data.")
 
@@ -48,10 +48,10 @@ def page_ml_performance_metrics():
 
     roc_plot = plt.imread(f"outputs/{version}/roc_plot.png")
     st.image(roc_plot, caption="ROC plot")
-    st.success("The ROC plot is a plot to evaludation the models ability to accurately distinguish between classes by plotting the false positive"
+    st.success("The ROC plot is a plot to evaluation the models ability to accurately distinguish between classes by plotting the false positive"
                "rate by the true positive rate. Plotting the false positive rate by the true positive rate suggested the model is very good at "
                "predicting the positive class, as the false positive rate was consistently near 0 and the true positive rate consistently close to 1."
-               " The AUC, which is used to summarise the overall perfromance, was 1.0 suggestive that the model is good a distinguishing between classes.")
+               " The AUC, which is used to summarise the overall performance, was 1.0 suggestive that the model is good a distinguishing between classes.")
 
     prec_recall_plot = plt.imread(
         f"outputs/{version}/precision_recall_plot.png")

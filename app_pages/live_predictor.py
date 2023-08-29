@@ -38,7 +38,7 @@ def page_powdery_mildew_predictor():
 
     st.write("---")
 
-    images_buffer = st.file_uploader('Upload your cherry leaf imagges here (multiple image uploads allowed)',
+    images_buffer = st.file_uploader('Upload your cherry leaf images here (multiple image uploads allowed)',
                                      type="jpg", accept_multiple_files=True)
 
     if images_buffer is not None:

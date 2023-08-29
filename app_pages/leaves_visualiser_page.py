@@ -14,7 +14,7 @@ def leaves_visualiser_body():
 
     """
     Create check box and render appropriate image based on if the corresponding
-    check box is checked
+    checkbox is checked
     If image montage box is checked, call image_montage function to create image montage of
     group based on what group the user selected
     """
