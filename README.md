@@ -34,10 +34,13 @@ EPIC | Dashboard design and development
 There were a number of COULD HAVE and SHOULDN'T HAVE user stores that were not completed for the reasons outlined below:
 
 * As a client, I can share my prediction results easily so I can give access to the data to my other colleagues (SHOULDN'T HAVE).
+
 Reason for non-completion: This user story was not completed due to data privacy concerns, for example if the data could be accidentally shared by anyone who had access to the link, this might break the NDA agreement.
 * As a client, I can provide feedback to the ML scientists via the dashboard so I can inform the model creators of any improvements that could be made to the ML tool (COULD HAVE) && As a client, I can view how the model generalises to data over time so I can monitor the model performance over a long period (COULD HAVE).
+
 Reason for non-completion: These users stories would be very effective for the monitoring stage of the CRISP-DM process as it would provide an easy feedback contact portal to the ML scientist and provide a history of all the live predictions so the farmers could compare these results with crop outcomes (i.e. cherry fruit quality). These user stories were not completed as it was outside the scope of this educational project.
 * As a client, I can report any technical issue with the dashboard so I can easily inform the developers of any bugs in the dashboard (COULD HAVE).
+
 Reason for non-completion: This user story was not completed due to time constraints but I believe would enhance the user experience and provide an effective way to monitor the dashboard.
 
 ### Dataset composition 
